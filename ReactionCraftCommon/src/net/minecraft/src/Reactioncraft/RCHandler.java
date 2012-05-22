@@ -15,7 +15,7 @@ public class RCHandler implements IBonemealHandler
         }
         else if(blockID == mod_ReactionCraft.CherrySapling.blockID)
         {
-            ((RcCherrySapling)mod_ReactionCraft.CherrySapling).growTree(world, i, j, k, world.rand);   
+            ((BlockCherrySapling)mod_ReactionCraft.CherrySapling).growTree(world, i, j, k, world.rand);   
         	return true;
         }
         return false;
