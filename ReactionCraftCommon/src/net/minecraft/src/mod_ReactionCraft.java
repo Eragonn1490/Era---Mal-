@@ -524,7 +524,7 @@ public class mod_ReactionCraft extends NetworkMod
 			        NetherfurnaceIA = (new RcBlockFurnace(ids[48], false)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setBlockName("Netherfurnace").setRequiresSelfNotify();
 			        NetherfurnaceA = (new RcBlockFurnace(ids[49], true)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setLightValue(0.875F).setBlockName("Netherfurnace").setRequiresSelfNotify();
 			    //Plants
-				    AncientPlant = new RcAncientPlant(ids[50], 0).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("AncientPlant");  
+				    AncientPlant = new AncientPlant(ids[50], 0).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("AncientPlant");  
 			        
 			        
 			    //Redstone Related
@@ -809,8 +809,7 @@ public class mod_ReactionCraft extends NetworkMod
 	
 	public void Bonemeal()
 	{
-		MinecraftForge.registerBonemealHandler(new RcCherrySaplingHandler());
-		MinecraftForge.registerBonemealHandler(new RcAncientPlantHandler());
+		MinecraftForge.registerBonemealHandler(new RCHandler());
 	}
 	
 	
@@ -827,37 +826,37 @@ public class mod_ReactionCraft extends NetworkMod
 	{
 		 //MetaBlocks
     		//Glass Multi Blocks
-			ModLoader.registerBlock(Multi, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+			ModLoader.registerBlock(Multi, net.minecraft.src.Reactioncraft.ItemMulti.class);
 			//Nether Multi Blocks
-	        ModLoader.registerBlock(NetherMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(NetherMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //HireoGlyphics
-	        ModLoader.registerBlock(HireoMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(HireoMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Flowers
-	        ModLoader.registerBlock(FlowerMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(FlowerMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Bushes
-	        ModLoader.registerBlock(BushesMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);	        
+	        ModLoader.registerBlock(BushesMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);	        
 	        //Small Columns
-	        ModLoader.registerBlock(SkinnyColumnMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(SkinnyColumnMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Columns
-	        ModLoader.registerBlock(ColumnMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(ColumnMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Bricks
-	        ModLoader.registerBlock(BrickMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(BrickMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Ores
-	        ModLoader.registerBlock(OreMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(OreMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Ore Blocks
-	        ModLoader.registerBlock(OreBlockMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(OreBlockMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Desert Blocks
-	        ModLoader.registerBlock(DesertBlockMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(DesertBlockMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Glowing Carpets
-	        ModLoader.registerBlock(CarpetMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(CarpetMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Fossils
-	        ModLoader.registerBlock(FossilMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(FossilMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //GlowShrooms
-	        ModLoader.registerBlock(GlowShroomMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(GlowShroomMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Shells
-	        ModLoader.registerBlock(ShellMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(ShellMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Lanterns
-	        ModLoader.registerBlock(LanternMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
+	        ModLoader.registerBlock(LanternMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	}
 	
 	
