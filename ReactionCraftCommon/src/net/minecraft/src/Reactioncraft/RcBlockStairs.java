@@ -17,7 +17,7 @@ public class RcBlockStairs extends Block implements ITextureProvider
 {
     /** The block that is used as model for the stair. */
 
-    protected RcBlockStairs(int i, int j)
+    public RcBlockStairs(int i, int j)
     {
         super(i, j, Material.rock);
         

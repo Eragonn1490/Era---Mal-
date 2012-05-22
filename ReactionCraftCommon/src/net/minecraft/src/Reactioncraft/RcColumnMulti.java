@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class RcColumnMulti extends Block implements ITextureProvider
 {
-    protected RcColumnMulti(int i, Material material)
+    public RcColumnMulti(int i, Material material)
     {
         super(i, material);
         float f = 0.375F;

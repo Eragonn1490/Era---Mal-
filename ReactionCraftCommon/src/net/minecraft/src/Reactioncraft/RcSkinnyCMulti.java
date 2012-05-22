@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class RcSkinnyCMulti extends Block implements ITextureProvider
 {
-    protected RcSkinnyCMulti(int i, Material material)
+    public RcSkinnyCMulti(int i, Material material)
     {
         super(i, material);
         float f = 0.2F;

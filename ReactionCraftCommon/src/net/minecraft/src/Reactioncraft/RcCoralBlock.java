@@ -15,7 +15,7 @@ import net.minecraft.src.forge.*;
 public class RcCoralBlock extends Block implements ITextureProvider
 {
 
-    protected RcCoralBlock(int i, int j)
+    public RcCoralBlock(int i, int j)
     {
         super(i, Material.water);
         blockIndexInTexture = j;

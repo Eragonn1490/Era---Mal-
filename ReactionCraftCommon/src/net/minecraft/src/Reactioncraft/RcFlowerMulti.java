@@ -15,7 +15,7 @@ import java.util.Random;
 
 public class RcFlowerMulti extends Block implements ITextureProvider
 {
-    protected RcFlowerMulti(int i, Material material)
+    public RcFlowerMulti(int i, Material material)
     {
         super(i, material);
         this.setTickRandomly(true);

@@ -34,7 +34,7 @@ public class RcBlockFurnace extends BlockContainer implements ITextureProvider
      */
     private static boolean keepFurnaceInventory = false;
 
-    protected RcBlockFurnace(int par1, boolean par2)
+    public RcBlockFurnace(int par1, boolean par2)
     {
         super(par1, Material.rock);
         this.isActive = par2;

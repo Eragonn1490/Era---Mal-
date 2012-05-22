@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class RcOremulti extends Block implements ITextureProvider
 {
-    protected RcOremulti(int i, Material material)
+    public RcOremulti(int i, Material material)
     {
         super(i, material);
     }

@@ -14,7 +14,7 @@ import net.minecraft.src.forge.ITextureProvider;
 
 public class RcTorchBlock extends Block implements ITextureProvider
 {
-    protected RcTorchBlock(int i, int j)
+    public RcTorchBlock(int i, int j)
     {
         super(i, j, Material.circuits);
         this.setTickRandomly(true);

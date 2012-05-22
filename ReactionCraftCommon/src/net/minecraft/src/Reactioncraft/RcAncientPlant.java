@@ -12,7 +12,7 @@ import net.minecraft.src.forge.ITextureProvider;
 
 public class RcAncientPlant extends BlockFlower implements ITextureProvider
 {
-    protected RcAncientPlant(int par1, int par2)
+    public RcAncientPlant(int par1, int par2)
     {
         super(par1, par2);
         this.blockIndexInTexture = par2;

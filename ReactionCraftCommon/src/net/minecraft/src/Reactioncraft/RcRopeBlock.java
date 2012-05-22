@@ -12,7 +12,7 @@ import net.minecraft.src.forge.ITextureProvider;
 
 public class RcRopeBlock extends Block implements ITextureProvider
 {
-    protected RcRopeBlock(int par1, int par2)
+    public RcRopeBlock(int par1, int par2)
     {
         super(par1, par2, Material.circuits);
     }

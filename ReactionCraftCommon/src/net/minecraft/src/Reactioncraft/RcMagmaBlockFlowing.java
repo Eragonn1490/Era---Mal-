@@ -31,7 +31,7 @@ public class RcMagmaBlockFlowing extends BlockFluid implements ITextureProvider
      */
     int[] flowCost = new int[4];
 
-    protected RcMagmaBlockFlowing(int par1, Material par2Material)
+    public RcMagmaBlockFlowing(int par1, Material par2Material)
     {
         super(par1, par2Material);
         blockIndexInTexture = 15;

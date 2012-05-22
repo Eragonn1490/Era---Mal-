@@ -12,7 +12,7 @@ import net.minecraft.src.forge.ITextureProvider;
 public class RcMagmaBlockStationary extends BlockFluid implements ITextureProvider
 {
 
-	protected RcMagmaBlockStationary(int i, Material material)
+	public RcMagmaBlockStationary(int i, Material material)
     {
         super(i, material);
         this.setTickRandomly(false);
@@ -75,7 +75,7 @@ public class RcMagmaBlockStationary extends BlockFluid implements ITextureProvid
 
     private boolean func_301_k(World world, int i, int j, int k)
     {
-        return world.getBlockMaterial(i, j, k).setBurning() != null;
+        return world.getBlockMaterial(i, j, k).getCanBurn();
     }
 	@Override
 	public String getTextureFile() {

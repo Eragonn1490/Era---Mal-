@@ -16,7 +16,7 @@ import net.minecraft.src.forge.ITextureProvider;
 
 public class RcGrassBlock extends BlockFlower implements ITextureProvider
 {
-    protected RcGrassBlock(int par1)
+    public RcGrassBlock(int par1)
     {
         super(par1, par1, Material.grass);
         this.blockIndexInTexture = 34;

@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class RcGlowShroomCarpetMulti extends Block implements ITextureProvider
 {
-    protected RcGlowShroomCarpetMulti(int i, Material material)
+    public RcGlowShroomCarpetMulti(int i, Material material)
     {
         super(i, material);
         float var5 = 0.0625F;

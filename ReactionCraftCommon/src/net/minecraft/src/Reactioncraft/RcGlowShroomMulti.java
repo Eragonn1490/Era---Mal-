@@ -15,7 +15,7 @@ import java.util.Random;
 
 public class RcGlowShroomMulti extends Block implements ITextureProvider
 {
-    protected RcGlowShroomMulti(int i, Material material)
+    public RcGlowShroomMulti(int i, Material material)
     {
         super(i, material);
         this.setTickRandomly(true);

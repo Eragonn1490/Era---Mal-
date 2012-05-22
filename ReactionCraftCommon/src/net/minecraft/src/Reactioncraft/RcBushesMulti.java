@@ -15,7 +15,7 @@ import java.util.Random;
 
 public class RcBushesMulti extends Block implements ITextureProvider
 {
-    protected RcBushesMulti(int i, Material material)
+    public RcBushesMulti(int i, Material material)
     {
         super(i, material);
         this.setTickRandomly(true);

@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class RcFossilMulti extends Block implements ITextureProvider
 {
-    protected RcFossilMulti(int i, Material material)
+    public RcFossilMulti(int i, Material material)
     {
         super(i, material);
     }

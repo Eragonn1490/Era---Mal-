@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class RcLanternMulti extends Block implements ITextureProvider
 {
-    protected RcLanternMulti(int i, Material material)
+    public RcLanternMulti(int i, Material material)
     {
         super(i, material);
     }

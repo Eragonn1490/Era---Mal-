@@ -13,7 +13,7 @@ import net.minecraft.src.forge.ITextureProvider;
 public class RcBlockSeaweed extends Block implements ITextureProvider
 {
 
-    protected RcBlockSeaweed(int i, int j)
+    public RcBlockSeaweed(int i, int j)
     {
         super(i, Material.water);
         blockIndexInTexture = j;

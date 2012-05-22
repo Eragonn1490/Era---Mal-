@@ -27,7 +27,7 @@ public class RcBlockChest extends BlockContainer implements ITextureProvider
 {
     private Random random = new Random();
 
-    protected RcBlockChest(int par1)
+    public RcBlockChest(int par1)
     {
         super(par1, Material.wood);
         this.blockIndexInTexture = 63;

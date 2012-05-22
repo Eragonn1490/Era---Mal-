@@ -11,7 +11,7 @@ import net.minecraft.src.forge.ITextureProvider;
 
 public class RcFlowerBlock extends BlockFlower implements ITextureProvider
 {
-    protected RcFlowerBlock(int par1, int j)
+    public RcFlowerBlock(int par1, int j)
     {
         super(par1, j);
         this.blockIndexInTexture = j;

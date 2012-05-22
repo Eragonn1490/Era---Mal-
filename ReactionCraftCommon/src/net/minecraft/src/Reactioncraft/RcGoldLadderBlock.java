@@ -12,7 +12,7 @@ import net.minecraft.src.forge.ITextureProvider;
 
 public class RcGoldLadderBlock extends Block implements ITextureProvider
 {
-    protected RcGoldLadderBlock(int par1, int par2)
+    public RcGoldLadderBlock(int par1, int par2)
     {
         super(par1, par2, Material.circuits);
     }

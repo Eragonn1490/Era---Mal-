@@ -12,7 +12,7 @@ public class RcBloodStonePicaxe extends RcItemTool implements ITextureProvider
     private int weaponDamage;
     private final RcEnumToolMaterial field_40439_b;
 
-    protected RcBloodStonePicaxe(int i, RcEnumToolMaterial rcenumtoolmaterial)
+    public RcBloodStonePicaxe(int i, RcEnumToolMaterial rcenumtoolmaterial)
     {
         super(i, 2, rcenumtoolmaterial, blocksEffectiveAgainst);
         field_40439_b = rcenumtoolmaterial;

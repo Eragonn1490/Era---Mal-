@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class Rcnethermulti extends Block implements ITextureProvider
 {
-    protected Rcnethermulti(int i, Material material)
+    public Rcnethermulti(int i, Material material)
     {
         super(i, material);
     }

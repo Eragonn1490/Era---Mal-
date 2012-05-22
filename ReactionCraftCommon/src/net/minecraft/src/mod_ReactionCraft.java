@@ -428,21 +428,21 @@ public class mod_ReactionCraft extends NetworkMod
 			        
 					
 					//Gui Blocks
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Crate Block", ).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Nether Furnace on", ).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Nether Furnace off", ).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Crate Block", 154).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Nether Furnace on", 155).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Nether Furnace off", 156).value),
 			        //End of Gui Blocks
 					
 					
 					//Plants
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Ancient Plant", ).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Ancient Plant", 157).value),
 					//End of Plants
 
 					
 					//Redstone Related Blocks
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Trap Door Block", ).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Redstone Block", ).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Compressed Redstone Block", ).value),					
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Trap Door Block", 158).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Redstone Block", 159).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Compressed Redstone Block", 160).value),					
 					//End of Redstone Related Blocks
 					
 					//Items
@@ -522,115 +522,115 @@ public class mod_ReactionCraft extends NetworkMod
 			    //Gui Blocks
 			        RcCrate = (new RcBlockChest(ids[47])).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("RcCrate");
 			        NetherfurnaceIA = (new RcBlockFurnace(ids[48], false)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setBlockName("Netherfurnace").setRequiresSelfNotify();
-			        NetherfurnaceA = (new RcBlockFurnace(ids[48], true)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setLightValue(0.875F).setBlockName("Netherfurnace").setRequiresSelfNotify();
+			        NetherfurnaceA = (new RcBlockFurnace(ids[49], true)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setLightValue(0.875F).setBlockName("Netherfurnace").setRequiresSelfNotify();
 			    //Plants
-				    AncientPlant = new RcAncientPlant(ids[], 0).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("AncientPlant");  
+				    AncientPlant = new RcAncientPlant(ids[50], 0).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("AncientPlant");  
 			        
 			        
 			    //Redstone Related
-			      	 TrapBlock = new RcGhostBlock(ids[], 0).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("TrapBlock");
-			      	 RedStoneBlock = new RcRedstoneBlock(ids[], 0).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("RedStoneBlock");
-			      	 RedStoneBlockc = new RcRedstoneBlock(ids[], 1).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("RedStoneBlock");
+			      	 TrapBlock = new RcGhostBlock(ids[51], 0).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("TrapBlock");
+			      	 RedStoneBlock = new RcRedstoneBlock(ids[52], 0).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("RedStoneBlock");
+			      	 RedStoneBlockc = new RcRedstoneBlock(ids[53], 1).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("RedStoneBlock");
 			       
 			        
 			    //Plank		      	
-				     StainedPlank = new RcForgeBlock(ids[], 100).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("StainedPlank");
+				     StainedPlank = new RcForgeBlock(ids[54], 100).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("StainedPlank");
 				       
 					
 				//Spike Traps
-			      	 SteelSpike = new RcTrap(ids[], 153).setHardness(0.1F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("SteelSpike");
-			      	 SteelSpikeu = new RcTrap(ids[], 154).setHardness(0.1F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("SteelSpikeu");
+			      	 SteelSpike = new RcTrap(ids[55], 153).setHardness(0.1F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("SteelSpike");
+			      	 SteelSpikeu = new RcTrap(ids[56], 154).setHardness(0.1F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("SteelSpikeu");
 			       
 					
 					
 				//Flowers
 					
-					RcTallGrass = new RcGrassBlock(ids[]).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("RcTallGrass").setRequiresSelfNotify();		
-					Vase = new RcFlowerBlock(ids[], 97).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("Vase").setRequiresSelfNotify();
+					RcTallGrass = new RcGrassBlock(ids[57]).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("RcTallGrass").setRequiresSelfNotify();		
+					Vase = new RcFlowerBlock(ids[58], 97).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("Vase").setRequiresSelfNotify();
 					
 					
 					
 				//Doors
-					Bookcasedoor = new RcBlockDoor(ids[], Material.wood).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("Bookcasedoor");
+					Bookcasedoor = new RcBlockDoor(ids[59], Material.wood).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("Bookcasedoor");
 					
 					
 					
 					//Fences
-					Fence = new RcFenceBlock(ids[], 139).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("Fence");
-					BSFence = new RcFenceBlock(ids[], 84).setHardness(70.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("BSFence");
-					CobbleFence = new RcFenceBlock1(ids[], 1).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("CobbleFence");
-					MarbleFence = new RcFenceBlock(ids[], 164).setHardness(1.5F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("MarbleFence");
-					StoneFence = new RcFenceBlock1(ids[], 0).setHardness(1.5F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("StoneFence");
+					Fence = new RcFenceBlock(ids[60], 139).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("Fence");
+					BSFence = new RcFenceBlock(ids[61], 84).setHardness(70.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("BSFence");
+					CobbleFence = new RcFenceBlock1(ids[62], 1).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("CobbleFence");
+					MarbleFence = new RcFenceBlock(ids[63], 164).setHardness(1.5F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("MarbleFence");
+					StoneFence = new RcFenceBlock1(ids[64], 0).setHardness(1.5F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("StoneFence");
 					
 				//PermaFrost
-					PermaFrost = new RcForgeBlock(ids[], 156).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("PermaFrost");	
+					PermaFrost = new RcForgeBlock(ids[65], 156).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("PermaFrost");	
 					
 					
 				 //Torches
-			      	MysticTorch = new RcTorchBlock(ids[], 96).setLightValue(0.80F).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("MysticTorch");
+			      	MysticTorch = new RcTorchBlock(ids[66], 96).setLightValue(0.80F).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("MysticTorch");
 			    
 			      	
 			     //chandelier chains
-			      	Chain = new RcChain(ids[], 114).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("Chain");
+			      	Chain = new RcChain(ids[67], 114).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("Chain");
 			       
 			        
 			     //Glowing Grass
-			      	GlowingGrass = new RcGlowingGrass(ids[], 125).setLightValue(0.80F).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GlowingGrass");
+			      	GlowingGrass = new RcGlowingGrass(ids[68], 125).setLightValue(0.80F).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GlowingGrass");
 
 			      	 
 			     //coral blocks
-			       CoralBlock1 = new RcForgeBlock(ids[], 6).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("CoralBlock1");
-			       CoralBlock2 = new RcForgeBlock(ids[], 7).setLightValue(0.80F).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("CoralBlock2");
-			       CoralBlock3 = new RcForgeBlock(ids[], 15).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("CoralBlock3");
+			       CoralBlock1 = new RcForgeBlock(ids[69], 6).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("CoralBlock1");
+			       CoralBlock2 = new RcForgeBlock(ids[70], 7).setLightValue(0.80F).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("CoralBlock2");
+			       CoralBlock3 = new RcForgeBlock(ids[71], 15).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("CoralBlock3");
 			       
 			     //coral plants
-			       OrangeCoral = new RcCoralBlock(ids[], 0).setLightValue(1.0F).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("MagentaCoral");
-			       GreenCoral = new RcCoralBlock(ids[], 1).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("PurpleCoral");
-			       PurpleCoral = new RcCoralBlock(ids[], 2).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("OrangeCoral");
-			       BrownCoral = new RcCoralBlock(ids[], 3).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("BrownCoral");
-			       BlueCoral = new RcCoralBlock(ids[], 4).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
-			       LightBlueCoral = new RcCoralBlock(ids[], 5).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
-			       LightGreenCoral = new RcCoralBlock(ids[], 8).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
-			       PinkCoral = new RcCoralBlock(ids[], 9).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
-			       LightBlueOrangeCoral = new RcCoralBlock(ids[], 10).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
-			       LightBlueCoral2 = new RcCoralBlock(ids[], 11).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
-			       DarkGreenCoral = new RcCoralBlock(ids[], 12).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
-			       RedCoral = new RcCoralBlock(ids[], 13).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
-			       MagentaCoral = new RcCoralBlock(ids[], 14).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("MagentaCoral");
+			       OrangeCoral = new RcCoralBlock(ids[72], 0).setLightValue(1.0F).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("MagentaCoral");
+			       GreenCoral = new RcCoralBlock(ids[73], 1).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("PurpleCoral");
+			       PurpleCoral = new RcCoralBlock(ids[74], 2).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("OrangeCoral");
+			       BrownCoral = new RcCoralBlock(ids[75], 3).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("BrownCoral");
+			       BlueCoral = new RcCoralBlock(ids[76], 4).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
+			       LightBlueCoral = new RcCoralBlock(ids[77], 5).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
+			       LightGreenCoral = new RcCoralBlock(ids[78], 8).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
+			       PinkCoral = new RcCoralBlock(ids[79], 9).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
+			       LightBlueOrangeCoral = new RcCoralBlock(ids[80], 10).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
+			       LightBlueCoral2 = new RcCoralBlock(ids[81], 11).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
+			       DarkGreenCoral = new RcCoralBlock(ids[82], 12).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
+			       RedCoral = new RcCoralBlock(ids[83], 13).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GreenCoral");
+			       MagentaCoral = new RcCoralBlock(ids[84], 14).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("MagentaCoral");
 			       
 			     //Ladder Type Blocks
-			       ChainL = new RcChainLadderBlock(ids[], 114).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("ChainL");
-			       VineL = new RcVineBlock(ids[]).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("VineL");
-			       Rope = new RcRopeBlock(ids[], 48).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("Rope");
-			       GL = new RcGoldLadderBlock(ids[], 68).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GL");
+			       ChainL = new RcChainLadderBlock(ids[85], 114).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("ChainL");
+			       VineL = new RcVineBlock(ids[86]).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("VineL");
+			       Rope = new RcRopeBlock(ids[87], 48).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("Rope");
+			       GL = new RcGoldLadderBlock(ids[88], 68).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("GL");
 			       
 			       
-			       SeaWeed = new RcBlockSeaweed(ids[], 71).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("Seaweed");
+			       SeaWeed = new RcBlockSeaweed(ids[89], 71).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("Seaweed");
 			       
-			       LimeStone = new RcForgeBlock(ids[], 51).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("LimeStone");
+			       LimeStone = new RcForgeBlock(ids[90], 51).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("LimeStone");
 			       
 			       
 			   //Item Code
-						BloodStoneDust = (new RcForgeItem(ids[])).setIconCoord(1, 0).setItemName("BloodStoneDust");
-						BlackDiamondShard = (new RcForgeItem(ids[])).setIconCoord(97, 0).setItemName("BlackDiamondShard");
-						BlackDiamondGem = (new RcForgeItem(ids[])).setIconCoord(84, 0).setItemName("BlackDiamondGem");
+						BloodStoneDust = (new RcForgeItem(ids[91])).setIconCoord(1, 0).setItemName("BloodStoneDust");
+						BlackDiamondShard = (new RcForgeItem(ids[92])).setIconCoord(97, 0).setItemName("BlackDiamondShard");
+						BlackDiamondGem = (new RcForgeItem(ids[93])).setIconCoord(84, 0).setItemName("BlackDiamondGem");
 						
 						
 						//raw stuff
-				         Straw = (new RcForgeItem(ids[])).setIconCoord(67, 0).setItemName("Straw");
-				         Sack = (new RcForgeItem(ids[])).setIconCoord(64, 0).setItemName("Sack");
-				         DriedBamboo = (new RcForgeItem(ids[])).setIconCoord(68, 0).setItemName("DriedBamboo");
-				         DarkGreenDye = (new RcForgeItem(ids[])).setIconCoord(65, 0).setItemName("DarkGreenDye");
-				         NetherCaneDust = (new RcForgeItem(ids[])).setIconCoord(66, 0).setItemName("NetherCaneDust");
+				         Straw = (new RcForgeItem(ids[94])).setIconCoord(67, 0).setItemName("Straw");
+				         Sack = (new RcForgeItem(ids[95])).setIconCoord(64, 0).setItemName("Sack");
+				         DriedBamboo = (new RcForgeItem(ids[96])).setIconCoord(68, 0).setItemName("DriedBamboo");
+				         DarkGreenDye = (new RcForgeItem(ids[97])).setIconCoord(65, 0).setItemName("DarkGreenDye");
+				         NetherCaneDust = (new RcForgeItem(ids[98])).setIconCoord(66, 0).setItemName("NetherCaneDust");
 				        //Food
 				        //Doors      
 				        //Dusts
-				         ManganeseDust = (new RcForgeItem(ids[])).setIconCoord(87, 0).setItemName("ManganeseDust");
-				         ZincDust = (new RcForgeItem(ids[])).setIconCoord(96, 0).setItemName("ZincDust");
+				         ManganeseDust = (new RcForgeItem(ids[99])).setIconCoord(87, 0).setItemName("ManganeseDust");
+				         ZincDust = (new RcForgeItem(ids[100])).setIconCoord(96, 0).setItemName("ZincDust");
 				        //Liquids
 				        //DragonStone-BloodStone Tools
-				         BloodStoneHoe = (new RcBloodStoneSword(ids[], RcEnumToolMaterial.BLOODSTONE)).setIconCoord(89, 0).setItemName("BloodStoneSword");
-				         BloodStoneAxe = (new RcBloodStoneSword(ids[], RcEnumToolMaterial.BLOODSTONE)).setIconCoord(86, 0).setItemName("BloodStoneSword");
+				         BloodStoneHoe = (new RcBloodStoneSword(ids[101], RcEnumToolMaterial.BLOODSTONE)).setIconCoord(89, 0).setItemName("BloodStoneSword");
+				         BloodStoneAxe = (new RcBloodStoneSword(ids[102], RcEnumToolMaterial.BLOODSTONE)).setIconCoord(86, 0).setItemName("BloodStoneSword");
 				         BloodStoneShovel = (new RcBloodStoneSword(5028, RcEnumToolMaterial.BLOODSTONE)).setIconCoord(88, 0).setItemName("BloodStoneSword");
 				         BloodStoneSword = (new RcBloodStoneSword(5029, RcEnumToolMaterial.BLOODSTONE)).setIconCoord(5, 0).setItemName("BloodStoneSword");
 				         BloodStonePicAxe = (new RcBloodStonePicaxe(5030, RcEnumToolMaterial.BLOODSTONE)).setIconCoord(85, 0).setItemName("BloodStonePixAxe");
@@ -827,37 +827,37 @@ public class mod_ReactionCraft extends NetworkMod
 	{
 		 //MetaBlocks
     		//Glass Multi Blocks
-			ModLoader.registerBlock(Multi, net.minecraft.src.RcItemMulti.class);
+			ModLoader.registerBlock(Multi, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 			//Nether Multi Blocks
-	        ModLoader.registerBlock(NetherMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(NetherMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //HireoGlyphics
-	        ModLoader.registerBlock(HireoMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(HireoMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //Flowers
-	        ModLoader.registerBlock(FlowerMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(FlowerMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //Bushes
-	        ModLoader.registerBlock(BushesMulti, net.minecraft.src.RcItemMulti.class);	        
+	        ModLoader.registerBlock(BushesMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);	        
 	        //Small Columns
-	        ModLoader.registerBlock(SkinnyColumnMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(SkinnyColumnMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //Columns
-	        ModLoader.registerBlock(ColumnMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(ColumnMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //Bricks
-	        ModLoader.registerBlock(BrickMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(BrickMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //Ores
-	        ModLoader.registerBlock(OreMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(OreMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //Ore Blocks
-	        ModLoader.registerBlock(OreBlockMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(OreBlockMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //Desert Blocks
-	        ModLoader.registerBlock(DesertBlockMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(DesertBlockMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //Glowing Carpets
-	        ModLoader.registerBlock(CarpetMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(CarpetMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //Fossils
-	        ModLoader.registerBlock(FossilMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(FossilMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //GlowShrooms
-	        ModLoader.registerBlock(GlowShroomMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(GlowShroomMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //Shells
-	        ModLoader.registerBlock(ShellMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(ShellMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	        //Lanterns
-	        ModLoader.registerBlock(LanternMulti, net.minecraft.src.RcItemMulti.class);
+	        ModLoader.registerBlock(LanternMulti, net.minecraft.src.Reactioncraft.RcItemMulti.class);
 	}
 	
 	
