@@ -12,10 +12,10 @@ import net.minecraft.src.World;
 import net.minecraft.src.mod_ReactionCraft;
 import net.minecraft.src.forge.*;
 
-public class CoralPlant extends Block implements ITextureProvider
+public class BlockCoral extends Block implements ITextureProvider
 {
 
-    public CoralPlant(int i, int j)
+    public BlockCoral(int i, int j)
     {
         super(i, Material.water);
         blockIndexInTexture = j;
