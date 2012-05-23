@@ -11,9 +11,9 @@ import net.minecraft.src.forge.*;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class BlockOreMulti2 extends Block implements ITextureProvider
+public class BlockRcOres extends Block implements ITextureProvider
 {
-    public BlockOreMulti2(int i, Material material)
+    public BlockRcOres(int i, Material material)
     {
         super(i, material);
     }
