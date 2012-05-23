@@ -4,7 +4,7 @@ import net.minecraft.src.World;
 import net.minecraft.src.mod_ReactionCraft;
 import net.minecraft.src.forge.*;
 
-public class RCHandler implements IBonemealHandler
+public class RcPlantHandler implements IBonemealHandler
 {
     public boolean onUseBonemeal(World world, int blockID, int i, int j, int k)
     {
