@@ -8,13 +8,13 @@ import net.minecraft.src.mod_ReactionCraft;
 import net.minecraft.src.forge.ITextureProvider;
 
 
-public class BlockDoorRc extends BlockDoor implements ITextureProvider
+public class BlockBookcaseDoorW extends BlockDoor implements ITextureProvider
 {
 	public String getTextureFile()
 	{
 		return "/reactioncraft/Blocks.png";
 	}
-    public BlockDoorRc (int i, Material material)
+    public BlockBookcaseDoorW  (int i, Material material)
     {
     	super(i, material);
         blockIndexInTexture = 151;
