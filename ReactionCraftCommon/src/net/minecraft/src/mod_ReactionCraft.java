@@ -521,8 +521,8 @@ public class mod_ReactionCraft extends NetworkMod
 			        
 			    //Gui Blocks
 			        RcCrate = (new BlockCrate(ids[47])).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("RcCrate");
-			        NetherfurnaceIA = (new BlockFurnaceRc(ids[48], false)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setBlockName("Netherfurnace").setRequiresSelfNotify();
-			        NetherfurnaceA = (new BlockFurnaceRc(ids[49], true)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setLightValue(0.875F).setBlockName("Netherfurnace").setRequiresSelfNotify();
+			        NetherfurnaceIA = (new BlockNetherFurnace(ids[48], false)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setBlockName("Netherfurnace").setRequiresSelfNotify();
+			        NetherfurnaceA = (new BlockNetherFurnace(ids[49], true)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setLightValue(0.875F).setBlockName("Netherfurnace").setRequiresSelfNotify();
 			    //Plants
 				    AncientPlant = new AncientPlant(ids[50], 0).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("AncientPlant");  
 			        

@@ -18,7 +18,7 @@ import net.minecraft.src.World;
 import net.minecraft.src.mod_ReactionCraft;
 import net.minecraft.src.forge.ITextureProvider;
 
-public class BlockFurnaceRc extends BlockContainer implements ITextureProvider
+public class BlockNetherFurnace extends BlockContainer implements ITextureProvider
 {
     /**
      * Is the random generator used by furnace to drop the inventory contents in random directions.
@@ -34,7 +34,7 @@ public class BlockFurnaceRc extends BlockContainer implements ITextureProvider
      */
     private static boolean keepFurnaceInventory = false;
 
-    public BlockFurnaceRc(int par1, boolean par2)
+    public BlockNetherFurnace(int par1, boolean par2)
     {
         super(par1, Material.rock);
         this.isActive = par2;
