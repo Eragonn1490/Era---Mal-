@@ -21,8 +21,8 @@ public class mod_ReactionCraft extends NetworkMod
 		public static Block BushesMulti;
 		public static Block SkinnyColumnMulti;
 		public static Block ColumnMulti;
-		public static Block OreMulti;
 		public static Block OreBlockMulti;
+		public static Block MetalBlockMulti;
 		public static Block BrickMulti;
 		public static Block DesertBlockMulti;
 		public static Block CarpetMulti;
@@ -459,8 +459,8 @@ public class mod_ReactionCraft extends NetworkMod
 					SkinnyColumnMulti = new BlockSkinnyCMulti(ids[6], Material.rock).setHardness(3.0F).setBlockName("SCMulti");
 					ColumnMulti = new BlockColumnMulti(ids[7], Material.rock).setHardness(3.0F).setBlockName("ColumnMulti");
 					BrickMulti = new BlockBrickMulti(ids[8], Material.rock).setHardness(3.0F).setBlockName("BrickMulti");
-					OreMulti = new BlockOreMulti2(ids[9], Material.rock).setHardness(3.0F).setBlockName("OreMulti");
-					OreBlockMulti = new BlockOreMulti(ids[10], Material.rock).setHardness(3.0F).setBlockName("OreBlockMulti");
+					OreBlockMulti = new BlockRcOres(ids[9], Material.rock).setHardness(3.0F).setBlockName("OreMulti");
+					MetalBlockMulti = new BlockRcMetalBlocks(ids[10], Material.rock).setHardness(3.0F).setBlockName("OreBlockMulti");
 					DesertBlockMulti = new BlockDesertMulti(ids[12], Material.rock).setHardness(3.0F).setBlockName("DesertBlockMulti");
 					CarpetMulti = new BlockGlowShroomCarpetMulti(ids[13], Material.rock).setHardness(3.0F).setBlockName("GlowShroomCarpetMulti");
 					FossilMulti = new BlockFossilMulti(ids[14], Material.rock).setHardness(0.5F).setBlockName("FossilMulti");
@@ -551,7 +551,7 @@ public class mod_ReactionCraft extends NetworkMod
 					
 					
 				//Doors
-					Bookcasedoor = new BlockDoorRc(ids[59], Material.wood).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("Bookcasedoor");
+					Bookcasedoor = new BlockBookcaseDoorW(ids[59], Material.wood).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("Bookcasedoor");
 					
 					
 					
@@ -809,7 +809,7 @@ public class mod_ReactionCraft extends NetworkMod
 	
 	public void Bonemeal()
 	{
-		MinecraftForge.registerBonemealHandler(new RCHandler());
+		MinecraftForge.registerBonemealHandler(new RcForgeHandler());
 	}
 	
 	
@@ -842,9 +842,9 @@ public class mod_ReactionCraft extends NetworkMod
 	        //Bricks
 	        ModLoader.registerBlock(BrickMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Ores
-	        ModLoader.registerBlock(OreMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
-	        //Ore Blocks
 	        ModLoader.registerBlock(OreBlockMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
+	        //Ore Blocks
+	        ModLoader.registerBlock(MetalBlockMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Desert Blocks
 	        ModLoader.registerBlock(DesertBlockMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Glowing Carpets
@@ -942,42 +942,42 @@ public class mod_ReactionCraft extends NetworkMod
             
             
 	        //Ores!
-	        ModLoader.addName(new ItemStack(OreMulti, 1),     "Platinum Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 1),  "Iron Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 2),  "Gold Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 3),  "Tin Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 4),  "Copper Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 5),  "Mithril Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 6),  "Adamantite Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 7),  "Daeyalt Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 8),  "Zinc Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 9),  "Cobalt Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 10), "Titanium Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 11), "Silver Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 12), "Amethyst Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 13), "Calcite Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 14), "Vectrite Ore");
-            ModLoader.addName(new ItemStack(OreMulti, 1, 15), "Manganese Ore");
+	        ModLoader.addName(new ItemStack(OreBlockMulti, 1),     "Platinum Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 1),  "Iron Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 2),  "Gold Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 3),  "Tin Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 4),  "Copper Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 5),  "Mithril Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 6),  "Adamantite Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 7),  "Daeyalt Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 8),  "Zinc Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 9),  "Cobalt Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 10), "Titanium Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 11), "Silver Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 12), "Amethyst Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 13), "Calcite Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 14), "Vectrite Ore");
+            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 15), "Manganese Ore");
 	        
 	        
             //
 	        
 	        
 	        //Ore Blocks
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1),     "Platinum Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 1),  "Cobalt Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 2),  "Copper Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 3),  "Mithril Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 4),  "Adamantite Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 5),  "Daeyalt Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 6),  "Tin Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 7),  "Titanium block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 8),  "Silver Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 9),  "Vectrite Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 10), "Calcite Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 11), "Steel Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 12), "Onyx Block");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 13), "Amethyst Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1),     "Platinum Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 1),  "Cobalt Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 2),  "Copper Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 3),  "Mithril Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 4),  "Adamantite Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 5),  "Daeyalt Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 6),  "Tin Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 7),  "Titanium block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 8),  "Silver Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 9),  "Vectrite Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 10), "Calcite Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 11), "Steel Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 12), "Onyx Block");
+            ModLoader.addName(new ItemStack(MetalBlockMulti, 1, 13), "Amethyst Block");
             
             
             //Lanterns
@@ -998,30 +998,30 @@ public class mod_ReactionCraft extends NetworkMod
 	
 	//OreMulti Meta Smelts
 		//mithril
-        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 5, new ItemStack(mod_ReactionCraft.MithrilIngot));
+        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 5, new ItemStack(mod_ReactionCraft.MithrilIngot));
         //silver related
-        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 11, new ItemStack(SilverIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 11, new ItemStack(SilverIngot, 1));
         //cobalt
-        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 9, new ItemStack(CobaltIngot, 1));                       
+        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 9, new ItemStack(CobaltIngot, 1));                       
         //adamantite
-        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 6, new ItemStack(AdamantiteIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 6, new ItemStack(AdamantiteIngot, 1));
         //Copper
-        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 4, new ItemStack(CopperIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 4, new ItemStack(CopperIngot, 1));
         //Tin
-        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 3, new ItemStack(TinIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 3, new ItemStack(TinIngot, 1));
         //Calcite
-        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 13, new ItemStack(CalciteIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 13, new ItemStack(CalciteIngot, 1));
         //Amethyst
-        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 12, new ItemStack(AmethystIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 12, new ItemStack(AmethystIngot, 1));
         //Dayealt
-        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 7, new ItemStack(DaeyaltIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 7, new ItemStack(DaeyaltIngot, 1));
         //Titanium
-        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 10, new ItemStack(TitaniumIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 10, new ItemStack(TitaniumIngot, 1));
         
         
         
         //platinum
-        ModLoader.addSmelting(OreMulti.blockID, new ItemStack(PlatinumIngot, 1));
+        ModLoader.addSmelting(OreBlockMulti.blockID, new ItemStack(PlatinumIngot, 1));
         
         //Misc Recipes\\
         
@@ -1317,7 +1317,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(30);
             int i2 = baseZ + rand.nextInt(16);
-            (new WorldGenMinable(OreMulti.blockID, 8)).generate(world, rand, i1, k1, i2);
+            (new WorldGenMinable(OreBlockMulti.blockID, 8)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1326,7 +1326,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(30);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 3)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 3)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1335,7 +1335,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(40);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 4)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 4)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1344,7 +1344,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(40);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 5)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 5)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1353,7 +1353,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(45);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 6)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 6)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1362,7 +1362,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(45);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 7)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 7)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1371,7 +1371,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(50);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 8)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 8)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1380,7 +1380,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(50);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 9)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 9)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1389,7 +1389,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(55);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 10)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 10)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1398,7 +1398,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(55);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 11)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 11)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1407,7 +1407,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(55);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 12)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 12)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1416,7 +1416,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(32);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 13)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 13)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1425,7 +1425,7 @@ public class mod_ReactionCraft extends NetworkMod
         	int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(31);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 14)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 14)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1434,7 +1434,7 @@ public class mod_ReactionCraft extends NetworkMod
         	int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(30);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 8, 15)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 8, 15)).generate(world, rand, i1, k1, i2);
         }
         
         //Iron scarecly at 12 , more frequently at 40
@@ -1443,14 +1443,14 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(12);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 3, 1)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 3, 1)).generate(world, rand, i1, k1, i2);
         }
         for(int k = 0; k < 15; k++)
         {
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(40);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 5, 1)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 5, 1)).generate(world, rand, i1, k1, i2);
         }
         
         //Gold gold ore found at 27, scarcely 18, 22
@@ -1459,21 +1459,21 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(18);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 1, 2)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 1, 2)).generate(world, rand, i1, k1, i2);
         }
         for(int k = 0; k < 10; k++)
         {
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(22);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 2, 2)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 2, 2)).generate(world, rand, i1, k1, i2);
         }
         for(int k = 0; k < 15; k++)
         {
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(27);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreMulti.blockID, 5, 2)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreBlockMulti.blockID, 5, 2)).generate(world, rand, i1, k1, i2);
         }
         
         //Magma Block

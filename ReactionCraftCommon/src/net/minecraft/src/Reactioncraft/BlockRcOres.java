@@ -11,33 +11,58 @@ import net.minecraft.src.forge.*;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class BlockRcMetalBlocks extends Block implements ITextureProvider
+public class BlockRcOres extends Block implements ITextureProvider
 {
-    public BlockRcMetalBlocks(int i, Material material)
+    public BlockRcOres(int i, Material material)
     {
         super(i, material);
     }
     
     
+    public float getHardness(int md)
+    {
+    	switch(md)
+    	{
+    		case 0: return 1.0F;
+    		case 1: return 3.0F;
+    		case 2: return 3.0F;
+    		case 3: return 1.0F;
+    		case 4: return 1.0F;
+    		case 5: return 1.0F;
+    		case 6: return 1.0F;
+    		case 7: return 1.0F;
+    		case 8: return 1.0F;
+    		case 9: return 1.0F;
+    		case 10: return 1.0F;
+    		case 11: return 1.0F;
+    		case 12: return 1.0F;
+    		case 13: return 1.0F;
+    		case 14: return 1.0F;
+    		default: return 3.0F;
+    	}
+
+    }
     
     public int idDropped(int i, Random random, int j)
     {
         switch(i)
             {
                 case 0: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 1: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 2: return mod_ReactionCraft.OreBlockMulti.blockID;
+                case 1: return mod_ReactionCraft.IronDust.shiftedIndex;
+                case 2: return mod_ReactionCraft.GoldClump.shiftedIndex;
                 case 3: return mod_ReactionCraft.OreBlockMulti.blockID;
                 case 4: return mod_ReactionCraft.OreBlockMulti.blockID;
                 case 5: return mod_ReactionCraft.OreBlockMulti.blockID;
                 case 6: return mod_ReactionCraft.OreBlockMulti.blockID;
                 case 7: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 8: return mod_ReactionCraft.OreBlockMulti.blockID;
+                case 8: return mod_ReactionCraft.ZincDust.shiftedIndex;
                 case 9: return mod_ReactionCraft.OreBlockMulti.blockID;
                 case 10: return mod_ReactionCraft.OreBlockMulti.blockID;
                 case 11: return mod_ReactionCraft.OreBlockMulti.blockID;
                 case 12: return mod_ReactionCraft.OreBlockMulti.blockID;
                 case 13: return mod_ReactionCraft.OreBlockMulti.blockID;
+                case 14: return mod_ReactionCraft.OreBlockMulti.blockID;
+                case 15: return mod_ReactionCraft.ManganeseDust.shiftedIndex;
                 default: return mod_ReactionCraft.OreBlockMulti.blockID;
             }
     }
@@ -46,10 +71,10 @@ public class BlockRcMetalBlocks extends Block implements ITextureProvider
     public int quantityDropped(int meta, int fortune, Random random)
 {
    switch(meta)
-        { 
+        {
             case 0: return 1;
-            case 1: return 1;
-            case 2: return 1;
+            case 1: return 3;
+            case 2: return 3;
             case 3: return 1;
             case 4: return 1;
             case 5: return 1;
@@ -61,6 +86,8 @@ public class BlockRcMetalBlocks extends Block implements ITextureProvider
             case 11: return 1;
             case 12: return 1;
             case 13: return 1;
+            case 14: return 1;
+            case 15: return 3;
             default: return 1;
         }
 }
@@ -83,30 +110,33 @@ public class BlockRcMetalBlocks extends Block implements ITextureProvider
             case 11: return 11;
             case 12: return 12;
             case 13: return 13;
-	default: return 0;
+            case 14: return 14;
+            default: return 15;
         }
     }
-       
-    public int getBlockTextureFromSideAndMetadata(int i, int meta)
+    
+    public int getBlockTextureFromSideAndMetadata(int side, int meta)
     {
     	switch(meta)
     	{
-    	case 0: return 217;
-        case 1: return 208;
-        case 2: return 209;
-        case 3: return 210;
-        case 4: return 211;
-        case 5: return 213;
-        case 6: return 216;
-        case 7: return 216;
-        case 8: return 223;
-        case 9: return 65;
-        case 10: return 220;
-        case 11: return 50;
-        case 12: return 65;
-        case 13: return 220;
+        	case 0: return 192;
+        	case 1: return 199;
+        	case 2: return 205;
+        	case 3: return 201;
+        	case 4: return 203;
+        	case 5: return 194;
+        	case 6: return 195;
+        	case 7: return 197;
+        	case 8: return 198;
+        	case 9: return 191;
+        	case 10: return 200;
+        	case 11: return 201;
+        	case 12: return 204;
+        	case 13: return 193;
+        	case 14: return 202;
+        	default: return 182;
         }
-        return meta;
+        
     }
     
     public void addCreativeItems(ArrayList itemList)

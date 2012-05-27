@@ -57,11 +57,6 @@ public class BlockCoral extends Block implements ITextureProvider
         return par1 == Block.dirt.blockID || par1 == Block.sand.blockID || par1 == Block.blockClay.blockID || par1 == mod_ReactionCraft.DarkSand.blockID || par1 == mod_ReactionCraft.CoralBlock1.blockID || par1 == mod_ReactionCraft.CoralBlock2.blockID || par1 == mod_ReactionCraft.CoralBlock3.blockID;
     }
 
-  public boolean canBlockStay(World world, int i, int j, int k)
-    {
-        return canPlaceBlockAt(world, i, j, k);
-    }
-
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int i, int j, int k)
     {
         return null;
