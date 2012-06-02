@@ -695,7 +695,7 @@ public class mod_ReactionCraft extends NetworkMod
 			       
 			     //Custom Block Model Blocks
 		        	//Custom Blocks
-		        
+			       blockAluminium = new BlockAluminium(132, 16, net.minecraft.src.TileEntityBlockAluminium.class).setHardness(0.7F).setResistance(5F).setBlockName("blockAluminium");
 		        	//Statues
 			       creeperStatue = new CreeperStatue(133, 16, net.minecraft.src.TileEntityCreeperStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("creeperStatue");
 			       HumanStatue = new HumanStatue(142, 16, net.minecraft.src.TileEntityHumanStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("HumanStatue");
@@ -708,10 +708,9 @@ public class mod_ReactionCraft extends NetworkMod
 			       endermanstatue = new EnderMStatue(149, 16, TileEntiyEndermanStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("endermanstatue");
 			       irongolemstatue = new IronGStatue(151, 16, net.minecraft.src.TileEntityIronGolemStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("irongolemstatue");
 		        	//SnowMan
-			       Snowman = new Snowman(152, 16,)
+			       Snowman = new Snowman(152, 16, net.minecraft.src.TileEntitySnowman.class).setHardness(0.7F).setResistance(5F).setBlockName("Snowman");
 		        	//Starfish
-			       Starfish = new Starfish(153, 16,)
-		        	//Starfish
+			       Starfish = new Starfish(153, 16, net.minecraft.src.TileEntityStarfish.class).setHardness(0.7F).setResistance(5F).setBlockName("Starfish");
 		        
 			       
 			   //Item Code
@@ -1176,7 +1175,7 @@ public class mod_ReactionCraft extends NetworkMod
         ///Desert Ore           	
 		ModLoader.addSmelting(DesertGold.blockID, new ItemStack(Item.ingotGold, 1));
 		
-		//
+		//Iron
 		ModLoader.addSmelting(Item.ingotIron.shiftedIndex, new ItemStack(SuperHeatedIron, 1));
 	}
 	
