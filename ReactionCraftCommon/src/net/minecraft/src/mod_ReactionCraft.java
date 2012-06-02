@@ -180,6 +180,27 @@ public class mod_ReactionCraft extends NetworkMod
         public static Block  SteelSpikeu;
 
         public static Block  StainedPlank;
+        
+        //Custom Block Model Blocks
+        	//Custom Blocks
+        public static Block blockAluminium;
+        	//Statues
+        public static Block creeperStatue;
+        public static Block HumanStatue; 
+        public static Block ZombieStatue; 
+        public static Block SpiderStatue; 
+        public static Block cowstatue;
+        public static Block pigstatue;
+        public static Block skeletonstatue; 
+        public static Block villagerstatue; 
+        public static Block endermanstatue; 
+        public static Block irongolemstatue;
+        	//SnowMan
+        public static Block Snowman;
+        	//Starfish
+        public static Block Starfish;
+        
+        
 		 
 		/**    *******************     Items     ****************************      **/
 				 
@@ -218,9 +239,9 @@ public class mod_ReactionCraft extends NetworkMod
 			    public static Item GoldCoinSack;
 			    public static Item SilverCoinSack;
 			    public static Item BrassCoinSack;
-			    public static  Item BagofGold;
-                public static  Item BagofSilver;
-                public static  Item BagofDiamond;
+			    public static Item BagofGold;
+                public static Item BagofSilver;
+                public static Item BagofDiamond;
                 
 			    
 			    //fish - new fishing drops
@@ -239,77 +260,94 @@ public class mod_ReactionCraft extends NetworkMod
 				public static Item BlackDiamondGem;
 				public static Item DragonStoneShard;
 				public static Item DragonStoneGem;
-		        public static  Item WhiteDiamondShard;
-		        public static  Item WhiteDiamondGem;     
-		        public static  Item DBDesertShard;
-		        public static  Item DBDesertGem;
-		        public static  Item LBDesertShard;
-		        public static  Item LBDesertGem;
+		        public static Item WhiteDiamondShard;
+		        public static Item WhiteDiamondGem;     
+		        public static Item DBDesertShard;
+		        public static Item DBDesertGem;
+		        public static Item LBDesertShard;
+		        public static Item LBDesertGem;
 				
 				//Raw Materials
 		        public static Item Straw;
 		        public static Item Sack;
-		        public static  Item Bag;
-		        public static  Item DriedBamboo;
-		        public static  Item DarkGreenDye;
-		        public static  Item NetherCaneDust;
-		        public static  Item MagmaFlint;
-		        public static  Item Papyrus;
-                public static  Item Reed;
-                public static  Item SandStonePaste;
+		        public static Item Bag;
+		        public static Item DriedBamboo;
+		        public static Item DarkGreenDye;
+		        public static Item NetherCaneDust;
+		        public static Item MagmaFlint;
+		        public static Item Papyrus;
+                public static Item Reed;
+                public static Item SandStonePaste;
                 
                 
 		        //foods
-		        public static  Item AncientFruit;
-		        public static  Item Bacon;
-		        public static  Item RawBacon;
-		        public static  Item ChickenNuggets;
-		        public static  Item RawNuggets;  
-		        public static  Item SBread;
-		        public static  Item SteakSandwich;
+		        public static Item AncientFruit;
+		        public static Item Bacon;
+		        public static Item RawBacon;
+		        public static Item ChickenNuggets;
+		        public static Item RawNuggets;  
+		        public static Item SBread;
+		        public static Item SteakSandwich;
 		        
 		        
 		        //Tools
-		        public static  Item Knife;
-		        public static  Item Flintchisel;
-		        public static  Item Goldchisel;
-		        public static  Item StoneHammer;
+		        public static Item Knife;
+		        public static Item Flintchisel;
+		        public static Item Goldchisel;
+		        public static Item BloodstoneChisel;
+		        public static Item StoneHammer;
 		        
 		        
 		        //Ingots
-		        public static  Item RefinedGoldIngot;
-		        public static  Item RefinedSilverIngot;
-		        public static  Item SilverIngot;
-		        public static  Item BrassIngot;
-		        public static  Item ObsidianIngot;
-		        public static  Item BloodStoneIngot;
-		        public static  Item MithrilIngot;
-		        public static  Item CobaltIngot;
-		        public static  Item TitaniumIngot;
-		        public static  Item TinIngot;
-		        public static  Item AdamantiteIngot;
-		        public static  Item CopperIngot;
-		        public static  Item PlatinumIngot;
-		        public static  Item ManganeseIngot;
-		        public static  Item OnyxIngot;
-                public static  Item IridiumIngot;
-                public static  Item CalciteIngot;
-                public static  Item AmethystIngot;
-                public static  Item DaeyaltIngot;
-                public static  Item SuperHeatedIron;
-                public static  Item SteelIngot;
+		        public static Item RefinedGoldIngot;
+		        public static Item RefinedSilverIngot;
+		        public static Item SilverIngot;
+		        public static Item BrassIngot;
+		        public static Item ObsidianIngot;
+		        public static Item BloodStoneIngot;
+		        public static Item MithrilIngot;
+		        public static Item CobaltIngot;
+		        public static Item TitaniumIngot;
+		        public static Item TinIngot;
+		        public static Item AdamantiteIngot;
+		        public static Item CopperIngot;
+		        public static Item PlatinumIngot;
+		        public static Item ManganeseIngot;
+		        public static Item OnyxIngot;
+                public static Item IridiumIngot;
+                public static Item CalciteIngot;
+                public static Item AmethystIngot;
+                public static Item DaeyaltIngot;
+                public static Item SuperHeatedIron;
+                public static Item SteelIngot;
                 
                 
-                //DragonStone-BloodStone Weapons
-		        public static  Item BloodStoneHoe;
-		        public static  Item BloodStoneAxe;
-		        public static  Item BloodStoneShovel;
-		        public static  Item BloodStoneSword;
-		        public static  Item BloodStonePicAxe;
+                //Weapons
+                	//DragonStone-BloodStone Weapons
+		        public static Item BloodStoneHoe;
+		        public static Item BloodStoneAxe;
+		        public static Item BloodStoneShovel;
+		        public static Item BloodStoneSword;
+		        public static Item BloodStonePicAxe;
+		        	//Bone Weapons
+		        public static Item BonePicAxe;
+		        	//Obsidian
+		        public static Item ObsidianAxe;
+		        public static Item ObsidianHoe;
+		        public static Item ObsidianSword;
+		        public static Item ObsidianShovel;
+		        	//Mithril
+		        public static Item MithrilSword;
+		        public static Item MithrilPicAxe;
+		        public static Item MithrilShovel;
+		        public static Item MithrilAxe;
+		        	//Flint-Bone
+		        public static Item BoneFlintPicAxe;
+		        public static Item BoneFlintShovel;
+		        public static Item BoneFlintSword;
+		        public static Item BoneFlintAxe;
+		        	//
 		        
-		        
-		        //Bone Weapons
-		        public static  Item BonePicAxe;
 		        
 		        
 		        //Seeds
@@ -320,9 +358,41 @@ public class mod_ReactionCraft extends NetworkMod
 		        public static  Item MagmaBucket;
 		            
 		        
+		        //Custom Glass Bottles
+		        public static Item GlassBottle;
+		        public staitc Item PosionBottle;
+		        
+		        
+		        //Arrows
+		        public static Item DiamondArrow;
+		        public static Item PosionArrow;
+		        public static Item SteelArrow;
+		        
+		        
 		        //Armor
-		        //public static  Item BloodstoneBottom;
-		        //public static  Item BloodstoneTop;
+		        	//Diving Suit
+		        public static Item DivingHelm;
+		        public static Item ScubaTank;
+		        	//Mithril
+		        public static Item MithrilChest;
+		        public static Item MithrilBoots;
+		        public static Item MithrilLegs;
+		        public static Item MithrilHelm;
+		        	//Iridium
+		        public static Item IridiumBoots;
+		        public static Item IridiumLegs;
+		        public static Item IridiumChest;
+		        public static Item IridiumHelm;
+		        	//Obsidan
+		        public static Item ObsidianHelm;
+		        public static Item ObsidanChest;
+		        public static Item ObsidanLegs;
+		        public static Item ObsidanBoots;
+		        	//Bloodstone
+		        public static Item BloodstoneChest;
+		        public static Item BloodstoneLegs;
+		        public static Item BloodstoneHelm;
+		        public static Item BloodstoneBootds;
 		        
 		        //Chain Parts
 		        public static  Item ChainLoop;
@@ -332,9 +402,22 @@ public class mod_ReactionCraft extends NetworkMod
 		        //Book like Items
 		        public static  Item Scroll;
 		        
+		        //Wands 
+		        public static Item DragonstoneWand;
+		        public static Item FireWand;
+		        public static Item IceWand;
+		        public static Item ElectricWand;
+		        public static Item WindWand;
+		        public static Item WizardsBook;
 		        
 		        //BCD
 		        public static Item BookcasedoorItem;
+		        
+		        
+		        /**  RailCraft Items **/
+		        public static Item BloodStoneBorehead;
+		        public static Item BlackdiamondBoreHead;
+		       
 		        
 		        
 		        //TO BE USED...
@@ -446,6 +529,7 @@ public class mod_ReactionCraft extends NetworkMod
 					//End of Redstone Related Blocks
 					
 					//Items
+					
 		};
 		config.save();
 		
@@ -609,6 +693,26 @@ public class mod_ReactionCraft extends NetworkMod
 			       
 			       LimeStone = new BlockForge(ids[90], 51).setHardness(1.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("LimeStone");
 			       
+			     //Custom Block Model Blocks
+		        	//Custom Blocks
+		        
+		        	//Statues
+			       creeperStatue = new CreeperStatue(133, 16, net.minecraft.src.TileEntityCreeperStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("creeperStatue");
+			       HumanStatue = new HumanStatue(142, 16, net.minecraft.src.TileEntityHumanStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("HumanStatue");
+			       ZombieStatue = new ZombieStatue(143, 16, net.minecraft.src.TileEntityZombieStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("ZombieStatue");
+			       SpiderStatue = new SpiderStatue(144, 16, net.minecraft.src.TileEntitySpiderStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("SpiderStatue");
+			       cowstatue = new CowStatue(145, 16, net.minecraft.src.TileEntityCowStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("cowstatue");
+			       pigstatue = new PigStatue(146, 16, net.minecraft.src.TileEntityPigStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("pigstatue");
+			       skeletonstatue = new SkeletonStatue(147, 16, net.minecraft.src.TileEntitySkeletonStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("skeletonstatue");
+			       villagerstatue = new VillagerStatue(148, 16, net.minecraft.src.TileEntityVillagerStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("villagerstatue");
+			       endermanstatue = new EnderMStatue(149, 16, TileEntiyEndermanStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("endermanstatue");
+			       irongolemstatue = new IronGStatue(151, 16, net.minecraft.src.TileEntityIronGolemStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("irongolemstatue");
+		        	//SnowMan
+			       Snowman = new Snowman(152, 16,)
+		        	//Starfish
+			       Starfish = new Starfish(153, 16,)
+		        	//Starfish
+		        
 			       
 			   //Item Code
 						BloodStoneDust = (new ItemForge(ids[91])).setIconCoord(1, 0).setItemName("BloodStoneDust");
@@ -631,104 +735,96 @@ public class mod_ReactionCraft extends NetworkMod
 				        //DragonStone-BloodStone Tools
 				         BloodStoneHoe = (new BloodStoneSword(ids[101], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(89, 0).setItemName("BloodStoneSword");
 				         BloodStoneAxe = (new BloodStoneSword(ids[102], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(86, 0).setItemName("BloodStoneSword");
-				         BloodStoneShovel = (new BloodStoneSword(5028, EnumRcToolMaterial.BLOODSTONE)).setIconCoord(88, 0).setItemName("BloodStoneSword");
-				         BloodStoneSword = (new BloodStoneSword(5029, EnumRcToolMaterial.BLOODSTONE)).setIconCoord(5, 0).setItemName("BloodStoneSword");
-				         BloodStonePicAxe = (new BloodStonePicaxe(5030, EnumRcToolMaterial.BLOODSTONE)).setIconCoord(85, 0).setItemName("BloodStonePixAxe");
+				         BloodStoneShovel = (new BloodStoneSword(ids[], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(88, 0).setItemName("BloodStoneSword");
+				         BloodStoneSword = (new BloodStoneSword(ids[], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(5, 0).setItemName("BloodStoneSword");
+				         BloodStonePicAxe = (new BloodStonePicaxe(ids[], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(85, 0).setItemName("BloodStonePixAxe");
 				        //Bone Stools
-				         BonePicAxe = (new BloodStoneSword(5031, EnumRcToolMaterial.Bone)).setIconCoord(99, 0).setItemName("BonePicAxe");
+				         BonePicAxe = (new BloodStoneSword(ids[], EnumRcToolMaterial.Bone)).setIconCoord(99, 0).setItemName("BonePicAxe");
 				            //Gems
-				         WhiteDiamondShard = (new ItemForge(5032)).setIconCoord(98, 0).setItemName("WhiteDiamond");
-				         BlackDiamondGem = (new ItemForge(5033)).setIconCoord(97, 0).setItemName("BlackDiamond1");
+				         WhiteDiamondShard = (new ItemForge(ids[])).setIconCoord(98, 0).setItemName("WhiteDiamond");
+				         BlackDiamondGem = (new ItemForge(ids[])).setIconCoord(97, 0).setItemName("BlackDiamond1");
 				        //Armor?
 				       
-				         SuperHeatedIron = (new ItemForge(5034)).setIconCoord(81, 0).setItemName("SuperHeatedIron");
-				         ChainLoop = (new ItemForge(5035)).setIconCoord(82, 0).setItemName("ChainLoop");
-				         ChainLoops = (new ItemForge(5036)).setIconCoord(83, 0).setItemName("ChainLoops");
-				         BlackDiamondShard = (new ItemForge(5037)).setIconCoord(84, 0).setItemName("BlackDiamond2");
-				         SteelIngot = (new ItemForge(5038)).setIconCoord(16, 0).setItemName("SteelIngot");
-				        // BloodstoneBottom = (new RcForgeItem(5039)).setIconCoord("fix", 0).setItemName("BloodStoneBottom");
-				        // BloodstoneTop = (new RcForgeItem(5040)).setIconCoord(, 0).setItemName("BloodStoneTop");
-				        // DinosaurFragments = (new RcForgeItem(5041)).setIconCoord("fix", 0).setItemName("DinosaurFragments");
-				        // DinosaurFragments1 = (new RcForgeItem(5042)).setIconCoord("fix", 0).setItemName("DinosaurFragments1");
-				        // DinosaurFragments2 = (new RcForgeItem(5043)).setIconCoord("fix", 0).setItemName("DinosaurFragments2");
-				        // DinosaurFragments3 = (new RcForgeItem(5044)).setIconCoord("fix", 0).setItemName("DinosaurFragments2");
-				         SandStonePaste = (new ItemForge(5045)).setIconCoord(119, 0).setItemName("SandStonePaste");
-				         Flintchisel = (new ItemForge(5046)).setIconCoord(110, 0).setItemName("Flintchisel");
-				         Goldchisel = (new ItemForge(5047)).setIconCoord(113, 0).setItemName("Goldchisel");
+				         SuperHeatedIron = (new ItemForge(ids[])).setIconCoord(81, 0).setItemName("SuperHeatedIron");
+				         ChainLoop = (new ItemForge(ids[])).setIconCoord(82, 0).setItemName("ChainLoop");
+				         ChainLoops = (new ItemForge(ids[])).setIconCoord(83, 0).setItemName("ChainLoops");
+				         BlackDiamondShard = (new ItemForge(ids[])).setIconCoord(84, 0).setItemName("BlackDiamond2");
+				         SteelIngot = (new ItemForge(ids[])).setIconCoord(16, 0).setItemName("SteelIngot");
+				         
+				         //Fossil Items
+				        DinosaurFragments = (new RcForgeItem(ids[])).setIconCoord("fix", 0).setItemName("DinosaurFragments");
+				        DinosaurFragments1 = (new RcForgeItem(ids[])).setIconCoord("fix", 0).setItemName("DinosaurFragments1");
+
+				         
+				         SandStonePaste = (new ItemForge(ids[])).setIconCoord(119, 0).setItemName("SandStonePaste");
+				         Flintchisel = (new ItemForge(ids[])).setIconCoord(110, 0).setItemName("Flintchisel");
+				         Goldchisel = (new ItemForge(ids[])).setIconCoord(113, 0).setItemName("Goldchisel");
 				       
 				        //foods and items to fix textures on
 				                //foods
-				         AncientFruit = (new ItemFoodRc(5048, 4, 1F, false)).setIconCoord(100, 0).setItemName("AncientFruit");
-				         Bacon = (new ItemFoodRc(5049, 4, 1F, false)).setIconCoord(111, 0).setItemName("Bacon");
-				         RawBacon = (new ItemForge(5050)).setIconCoord(126, 0).setItemName("RawBacon");
-				         ChickenNuggets = (new ItemFoodRc(5051, 4, 1F, false)).setIconCoord(122, 0).setItemName("ChichenNuggets");
-				         RawNuggets = (new ItemForge(5052)).setIconCoord(127, 0).setItemName("RawNuggets");        
-				         SBread = (new ItemFoodRc(5053, 4, 1F, false)).setIconCoord(124, 0).setItemName("SBread");
-				         SteakSandwich = (new ItemFoodRc(5054, 4, 1F, false)).setIconCoord(125, 0).setItemName("SteakSandWich");
+				         AncientFruit = (new ItemFoodRc(ids[], 4, 1F, false)).setIconCoord(100, 0).setItemName("AncientFruit");
+				         Bacon = (new ItemFoodRc(ids[], 4, 1F, false)).setIconCoord(111, 0).setItemName("Bacon");
+				         RawBacon = (new ItemForge(ids[])).setIconCoord(126, 0).setItemName("RawBacon");
+				         ChickenNuggets = (new ItemFoodRc(ids[], 4, 1F, false)).setIconCoord(122, 0).setItemName("ChichenNuggets");
+				         RawNuggets = (new ItemForge(ids[])).setIconCoord(127, 0).setItemName("RawNuggets");        
+				         SBread = (new ItemFoodRc(ids[], 4, 1F, false)).setIconCoord(124, 0).setItemName("SBread");
+				         SteakSandwich = (new ItemFoodRc(ids[], 4, 1F, false)).setIconCoord(125, 0).setItemName("SteakSandWich");
 				                //Tools
-				         Knife = (new ItemForge(5055)).setIconCoord(123, 0).setItemName("Knfie");
-		                //Items to be created...
-//		       AncientFruit = (new RcForgeItem(5056)).setIconCoord(100, 0).setItemName("AncientFruit");
-//		       AncientFruit = (new RcForgeItem(5057)).setIconCoord(100, 0).setItemName("AncientFruit");
-//		       AncientFruit = (new RcForgeItem(5058)).setIconCoord(100, 0).setItemName("AncientFruit");
-//		       AncientFruit = (new RcForgeItem(5059)).setIconCoord(100, 0).setItemName("AncientFruit");
-//		       AncientFruit = (new RcForgeItem(5060)).setIconCoord(100, 0).setItemName("AncientFruit");
-//		       AncientFruit = (new RcForgeItem(5061)).setIconCoord(100, 0).setItemName("AncientFruit");
-//		       AncientFruit = (new RcForgeItem(5062)).setIconCoord(100, 0).setItemName("AncientFruit");
-//		       AncientFruit = (new RcForgeItem(5063)).setIconCoord(100, 0).setItemName("AncientFruit");
-//		       AncientFruit = (new RcForgeItem(5064)).setIconCoord(100, 0).setItemName("AncientFruit");
+				         Knife = (new ItemForge(ids[])).setIconCoord(123, 0).setItemName("Knfie");
 		                       
-				         DBDesertGem = (new ItemForge(5066)).setIconCoord(132, 0).setItemName("DBDesertGem");
-				         DBDesertShard = (new ItemForge(5067)).setIconCoord(129, 0).setItemName("DBDesertGem1");
-				         LBDesertShard = (new ItemForge(5068)).setIconCoord(130, 0).setItemName("LBDesertGem1");
-				         LBDesertGem = (new ItemForge(5069)).setIconCoord(131, 0).setItemName("LBDesertGem");
+				         DBDesertGem = (new ItemForge(ids[])).setIconCoord(132, 0).setItemName("DBDesertGem");
+				         DBDesertShard = (new ItemForge(ids[])).setIconCoord(129, 0).setItemName("DBDesertGem1");
+				         LBDesertShard = (new ItemForge(ids[])).setIconCoord(130, 0).setItemName("LBDesertGem1");
+				         LBDesertGem = (new ItemForge(ids[])).setIconCoord(131, 0).setItemName("LBDesertGem");
 				                //buckets
-				         MagmaBucket = (new ItemForge(5070)).setIconCoord(113, 0).setItemName("MagmaBucket");
+				         MagmaBucket = (new ItemForge(ids[])).setIconCoord(113, 0).setItemName("MagmaBucket");
 				        //
-				         StoneHammer = (new ItemForge(5071)).setIconCoord(114, 0).setItemName("StoneHammer");
+				         StoneHammer = (new ItemForge(ids[])).setIconCoord(114, 0).setItemName("StoneHammer");
 				        //
-				         IBamboo = (new ItemBamboo(5072)).setIconCoord(136, 0).setItemName("IBamboo");
+				         IBamboo = (new ItemBamboo(ids[])).setIconCoord(136, 0).setItemName("IBamboo");
 		       
 		                //Flag
-		                 FlagItem1 = (new ItemForge(5073)).setIconCoord(141, 0).setItemName("FlagItem1");
+		                 FlagItem1 = (new ItemForge(ids[])).setIconCoord(141, 0).setItemName("FlagItem1");
 		               
 		               
 		                //
-		                 BagofGold = (new ItemForge(5074)).setIconCoord(140, 0).setItemName("BagofGold");
-		                 BagofSilver = (new ItemForge(5075)).setIconCoord(143, 0).setItemName("BagofSilver");
-		                 BagofDiamond = (new ItemForge(5076)).setIconCoord(139, 0).setItemName("BagofDiamond");
-		                 Bag = (new ItemForge(5077)).setIconCoord(145, 0).setItemName("Bag");
+		                 BagofGold = (new ItemForge(ids[])).setIconCoord(140, 0).setItemName("BagofGold");
+		                 BagofSilver = (new ItemForge(ids[])).setIconCoord(143, 0).setItemName("BagofSilver");
+		                 BagofDiamond = (new ItemForge(ids[])).setIconCoord(139, 0).setItemName("BagofDiamond");
+		                 Bag = (new ItemForge(ids[])).setIconCoord(145, 0).setItemName("Bag");
 		               
 		                //more desert stuff
-		                 Papyrus = (new ItemForge(5078)).setIconCoord(121, 0).setItemName("Papyrus");
-		                 Reed = (new ItemReedRc(5079)).setIconCoord(142, 0).setItemName("Reed");
-		                 Scroll = (new ItemForge(5080)).setIconCoord(120, 0).setItemName("Scroll");
-		                 MagmaFlint = (new ItemForge(5081)).setIconCoord(138, 0).setItemName("MagmaFlint");
+		                 Papyrus = (new ItemForge(ids[])).setIconCoord(121, 0).setItemName("Papyrus");
+		                 Reed = (new ItemReedRc(ids[])).setIconCoord(142, 0).setItemName("Reed");
+		                 Scroll = (new ItemForge(ids[])).setIconCoord(120, 0).setItemName("Scroll");
+		                 MagmaFlint = (new ItemForge(ids[])).setIconCoord(138, 0).setItemName("MagmaFlint");
 		               
 		               
 		                //Fixed Textured Ingots
-		                 RefinedGoldIngot = (new ItemForge(5082)).setIconCoord(62, 0).setItemName("RefinedGoldIngot");
-		                 RefinedSilverIngot = (new ItemForge(5083)).setIconCoord(61, 0).setItemName("RefinedSilverIngot");
-		                 SilverIngot = (new ItemForge(5084)).setIconCoord(61, 0).setItemName("SilverIngot");
-				         BrassIngot = (new ItemForge(5085)).setIconCoord(60, 0).setItemName("BrassIngot");
-				         ObsidianIngot = (new ItemForge(5086)).setIconCoord(23, 0).setItemName("ObsidianIngot");
-				         BloodStoneIngot = (new ItemForge(5087)).setIconCoord(6, 0).setItemName("BloodStoneIngot");
-				         MithrilIngot = (new ItemForge(5088)).setIconCoord(17, 0).setItemName("MithrilIngot");
-				         CobaltIngot = (new ItemForge(5089)).setIconCoord(44, 0).setItemName("CobaltIngot");
-				         TitaniumIngot = (new ItemForge(5090)).setIconCoord(10, 0).setItemName("TitaniumIngot");
-				         TinIngot = (new ItemForge(5091)).setIconCoord(29, 0).setItemName("TinIngot");
-				         AdamantiteIngot = (new ItemForge(5092)).setIconCoord(71, 0).setItemName("AdamantiteIngot");
-				         CopperIngot = (new ItemForge(5093)).setIconCoord(72, 0).setItemName("CopperIngot");
-				         PlatinumIngot = (new ItemForge(5094)).setIconCoord(28, 0).setItemName("PlatinumIngot");
-				         ManganeseIngot = (new ItemForge(5095)).setIconCoord(95, 0).setItemName("ManganeseIngot");
-				         OnyxIngot = (new ItemForge(5096)).setIconCoord(137, 0).setItemName("OnyxIngot");
-		                 IridiumIngot = (new ItemForge(5097)).setIconCoord(137, 0).setItemName("IridiumIngot");
-		                 CalciteIngot = (new ItemForge(5098)).setIconCoord(137, 0).setItemName("CalciteIngot");
-		                 AmethystIngot = (new ItemForge(5099)).setIconCoord(135, 0).setItemName("AmethystIngot");
-		                 DaeyaltIngot = (new ItemForge(5100)).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 RefinedGoldIngot = (new ItemForge(ids[])).setIconCoord(62, 0).setItemName("RefinedGoldIngot");
+		                 RefinedSilverIngot = (new ItemForge(ids[])).setIconCoord(61, 0).setItemName("RefinedSilverIngot");
+		                 SilverIngot = (new ItemForge(ids[])).setIconCoord(61, 0).setItemName("SilverIngot");
+				         BrassIngot = (new ItemForge(ids[])).setIconCoord(60, 0).setItemName("BrassIngot");
+				         ObsidianIngot = (new ItemForge(ids[])).setIconCoord(23, 0).setItemName("ObsidianIngot");
+				         BloodStoneIngot = (new ItemForge(ids[])).setIconCoord(6, 0).setItemName("BloodStoneIngot");
+				         MithrilIngot = (new ItemForge(ids[])).setIconCoord(17, 0).setItemName("MithrilIngot");
+				         CobaltIngot = (new ItemForge(ids[])).setIconCoord(44, 0).setItemName("CobaltIngot");
+				         TitaniumIngot = (new ItemForge(ids[])).setIconCoord(10, 0).setItemName("TitaniumIngot");
+				         TinIngot = (new ItemForge(ids[])).setIconCoord(29, 0).setItemName("TinIngot");
+				         AdamantiteIngot = (new ItemForge(ids[])).setIconCoord(71, 0).setItemName("AdamantiteIngot");
+				         CopperIngot = (new ItemForge(ids[])).setIconCoord(72, 0).setItemName("CopperIngot");
+				         PlatinumIngot = (new ItemForge(ids[])).setIconCoord(28, 0).setItemName("PlatinumIngot");
+				         ManganeseIngot = (new ItemForge(ids[])).setIconCoord(95, 0).setItemName("ManganeseIngot");
+				         OnyxIngot = (new ItemForge(ids[])).setIconCoord(137, 0).setItemName("OnyxIngot");
+		                 IridiumIngot = (new ItemForge(ids[])).setIconCoord(137, 0).setItemName("IridiumIngot");
+		                 CalciteIngot = (new ItemForge(ids[])).setIconCoord(137, 0).setItemName("CalciteIngot");
+		                 AmethystIngot = (new ItemForge(ids[])).setIconCoord(135, 0).setItemName("AmethystIngot");
+		                 DaeyaltIngot = (new ItemForge(ids[])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
 				
 				
-				
+		                 BloodstoneBorehead = (new IBloodstoneBH(ids[])).setIconCoord(151, 0).setItemName("BloodstoneBorehead");	
+		 		    	
+		 		    	 BlackdiamondBorehead = (new IBlackDiamondBH(ids[])).setIconCoord(150, 0).setItemName("BloodstoneBorehead");	
 				
 				
 			   //Achievements
