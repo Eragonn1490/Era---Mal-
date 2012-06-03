@@ -43,7 +43,7 @@ public class BlockNetherFurnace extends BlockContainer implements ITextureProvid
     
     public String getTextureFile()
 	{
-		return "/reactioncraft/furnace.png";
+		return "/reactioncraft/rcs/furnace.png";
 	}
     
     /**

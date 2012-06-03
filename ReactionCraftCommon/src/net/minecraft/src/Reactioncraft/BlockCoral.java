@@ -121,6 +121,6 @@ public class BlockCoral extends Block implements ITextureProvider
 	@Override
 	public String getTextureFile()
 	{
-		return "/reactioncraft/Blocks.png";
+		return "/reactioncraft/rcs/Blocks.png";
 	}
 }

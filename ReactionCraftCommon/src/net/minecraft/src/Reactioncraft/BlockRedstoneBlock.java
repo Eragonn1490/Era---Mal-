@@ -257,6 +257,6 @@ public class BlockRedstoneBlock extends Block implements IConnectRedstone, IText
 	@Override
 	public String getTextureFile() {
 		// TODO Auto-generated method stub
-		return "/reactioncraft/RcFalseBlocks.png";
+		return "/reactioncraft/rcs/RcFalseBlocks.png";
 	}
 }

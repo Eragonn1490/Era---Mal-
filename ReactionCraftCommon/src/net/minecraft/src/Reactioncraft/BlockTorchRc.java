@@ -259,6 +259,6 @@ public class BlockTorchRc extends Block implements ITextureProvider
 	@Override
 	public String getTextureFile() {
 		// TODO Auto-generated method stub
-		return "/reactioncraft/Blocks.png";
+		return "/reactioncraft/rcs/Blocks.png";
 	}
 }

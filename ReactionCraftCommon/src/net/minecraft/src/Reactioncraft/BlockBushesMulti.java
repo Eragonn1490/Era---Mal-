@@ -122,6 +122,6 @@ public class BlockBushesMulti extends Block implements ITextureProvider
     
     public String getTextureFile()
     {
-        return "/reactioncraft/Blocks.png";
+        return "/reactioncraft/rcs/Blocks.png";
     }
 }

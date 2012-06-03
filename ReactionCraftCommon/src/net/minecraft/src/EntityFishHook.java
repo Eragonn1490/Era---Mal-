@@ -445,7 +445,7 @@ public class EntityFishHook extends Entity
             bobber.motionZ += d23 * d67;
             byte0 = 3;
         }
-        else if (ticksCatchable > 1)
+        else if (ticksCatchable > 2)
         {
             int i = rand.nextInt(21);
 

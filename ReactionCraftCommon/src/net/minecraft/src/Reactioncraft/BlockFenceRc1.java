@@ -138,6 +138,6 @@ public class BlockFenceRc1 extends BlockFence implements ITextureProvider
 	@Override
 	public String getTextureFile() {
 		// TODO Auto-generated method stub
-		return "/reactioncraft/extendedcolumn.png";
+		return "/reactioncraft/rcs/extendedcolumn.png";
 	}
 }

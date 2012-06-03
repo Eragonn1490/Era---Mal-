@@ -12,7 +12,7 @@ public class BlockBookcaseDoorW extends BlockDoor implements ITextureProvider
 {
 	public String getTextureFile()
 	{
-		return "/reactioncraft/Blocks.png";
+		return "/reactioncraft/rcs/Blocks.png";
 	}
     public BlockBookcaseDoorW  (int i, Material material)
     {

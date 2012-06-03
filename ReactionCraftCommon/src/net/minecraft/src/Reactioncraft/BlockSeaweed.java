@@ -30,7 +30,7 @@ public class BlockSeaweed extends Block implements ITextureProvider
     
     public String getTextureFile()
     {
-        return "/reactioncraft/Blocks.png";
+        return "/reactioncraft/rcs/Blocks.png";
     }
     //End Eragonn Code
     public void updateTick(World world, int i, int j, int k, Random random)

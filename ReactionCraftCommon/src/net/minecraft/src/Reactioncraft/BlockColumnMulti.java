@@ -117,6 +117,6 @@ public class BlockColumnMulti extends Block implements ITextureProvider
     
     public String getTextureFile()
     {
-        return "/reactioncraft/Blocks.png";
+        return "/reactioncraft/rcs/Blocks.png";
     }
 }

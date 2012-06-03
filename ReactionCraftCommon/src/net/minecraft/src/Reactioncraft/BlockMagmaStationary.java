@@ -80,6 +80,6 @@ public class BlockMagmaStationary extends BlockFluid implements ITextureProvider
 	@Override
 	public String getTextureFile() {
 		// TODO Auto-generated method stub
-		return "/reactioncraft/Liquids.png";
+		return "/reactioncraft/rcs/Liquids.png";
 	}
 }

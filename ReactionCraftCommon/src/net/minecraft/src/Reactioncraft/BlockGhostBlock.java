@@ -18,7 +18,7 @@ public class BlockGhostBlock extends Block implements ITextureProvider
        
         public String getTextureFile()
         {
-                return "/reactioncraft/RcFalseBlocks.png";
+                return "/reactioncraft/rcs/RcFalseBlocks.png";
         }
        
         public int idDropped(int i, Random random)

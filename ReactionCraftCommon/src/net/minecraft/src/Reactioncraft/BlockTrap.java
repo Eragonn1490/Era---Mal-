@@ -21,7 +21,7 @@ public class BlockTrap extends Block implements ITextureProvider
        
         public String getTextureFile()
         {
-                return "/reactioncraft/Blocks.png";
+                return "/reactioncraft/rcs/Blocks.png";
         }
         
         public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)

@@ -70,6 +70,6 @@ public class BlockGlowShroomCarpetMulti extends Block implements ITextureProvide
     
     public String getTextureFile()
     {
-        return "/reactioncraft/Blocks.png";
+        return "/reactioncraft/rcs/Blocks.png";
     }
 }

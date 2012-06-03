@@ -44,7 +44,7 @@ public class BlockMagmaFlowing extends BlockFluid implements ITextureProvider
     
     public String getTextureFile()
     {
-        return "/reactioncraft/Liquids.png";
+        return "/reactioncraft/rcs/Liquids.png";
     }
     /**
      * Updates the flow for the BlockFlowing object.

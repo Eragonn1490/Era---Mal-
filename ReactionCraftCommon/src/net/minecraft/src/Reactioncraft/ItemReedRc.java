@@ -17,7 +17,7 @@ public class ItemReedRc extends Item implements ITextureProvider
 
 	public String getTextureFile()
 	{
-		return "/reactioncraft/Items.png";
+		return "/reactioncraft/rcs/Items.png";
 	}
     /**
      * Callback for item usage. If the item does something special on right clicking, he will have one of those. Return

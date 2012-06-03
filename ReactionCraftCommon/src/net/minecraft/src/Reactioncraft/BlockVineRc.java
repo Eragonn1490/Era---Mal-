@@ -5,7 +5,6 @@ import java.util.Random;
 
 import net.minecraft.src.AxisAlignedBB;
 import net.minecraft.src.Block;
-import net.minecraft.src.ColorizerFoliage;
 import net.minecraft.src.Direction;
 import net.minecraft.src.EntityPlayer;
 import net.minecraft.src.IBlockAccess;
@@ -213,28 +212,6 @@ public class BlockVineRc extends Block implements IShearable, ITextureProvider
 
             return true;
         }
-    }
-
-    public int getBlockColor()
-    {
-        return ColorizerFoliage.getFoliageColorBasic();
-    }
-
-    /**
-     * Returns the color this block should be rendered. Used by leaves.
-     */
-    public int getRenderColor(int par1)
-    {
-        return ColorizerFoliage.getFoliageColorBasic();
-    }
-
-    /**
-     * Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called
-     * when first determining what to render.
-     */
-    public int colorMultiplier(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
-    {
-        return par1IBlockAccess.getBiomeGenForCoords(par2, par4).getBiomeFoliageColor();
     }
 
     /**
@@ -474,6 +451,6 @@ public class BlockVineRc extends Block implements IShearable, ITextureProvider
 	@Override
 	public String getTextureFile() {
 		// TODO Auto-generated method stub
-		return "/reactioncraft/Blocks.png";
+		return "/reactioncraft/rcs/Blocks.png";
 	}
 }

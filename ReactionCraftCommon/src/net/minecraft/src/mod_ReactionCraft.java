@@ -1,4 +1,5 @@
 package net.minecraft.src;
+
 import java.io.File;
 import java.util.*;
 
@@ -21,7 +22,7 @@ public class mod_ReactionCraft extends NetworkMod
 		public static Block BushesMulti;
 		public static Block SkinnyColumnMulti;
 		public static Block ColumnMulti;
-		public static Block OreBlockMulti;
+		public static Block OreMulti;
 		public static Block MetalBlockMulti;
 		public static Block BrickMulti;
 		public static Block DesertBlockMulti;
@@ -79,7 +80,13 @@ public class mod_ReactionCraft extends NetworkMod
 	    
 	    //Plants
 	    public static Block AncientPlant;
-	    
+	    public static Block OrangeKush;     	
+        public static Block Blueberryyy; 
+    	public static Block LemonKush;     	
+    	public static Block BlueDream; 
+    	public static Block Fire; 	
+    	public static Block Crystal; 
+	    public static Block WildKush;
 	    
 	    //Redstone Related Blocks
 	    public static Block TrapBlock;
@@ -195,6 +202,7 @@ public class mod_ReactionCraft extends NetworkMod
         public static Block villagerstatue; 
         public static Block endermanstatue; 
         public static Block irongolemstatue;
+        public static Block dragonstatue;
         	//SnowMan
         public static Block Snowman;
         	//Starfish
@@ -352,7 +360,25 @@ public class mod_ReactionCraft extends NetworkMod
 		        
 		        //Seeds
 		        public static Item AncientSeeds;
-
+		        public static Item BlueDreamSeed;
+		        public static Item BYYSeed;
+		        public static Item CrystalSeed;
+		        public static Item FireSeed;
+		        public static Item LKSeed;
+		        public static Item OKSeed;
+		        public static Item WildKSeed;
+		        
+		        
+		        //Leaves
+		        public static Item BlueDreamBud;
+		        public static Item BYYBud;
+		        public static Item CrystalBud;
+		        public static Item FireBud;
+		        public static Item LKBud;
+		        public static Item OKBud;
+		        public static Item Toke;
+		        
+		        
 		        
 		        //buckets
 		        public static  Item MagmaBucket;
@@ -360,7 +386,7 @@ public class mod_ReactionCraft extends NetworkMod
 		        
 		        //Custom Glass Bottles
 		        public static Item GlassBottle;
-		        public staitc Item PosionBottle;
+		        public static Item PosionBottle;
 		        
 		        
 		        //Arrows
@@ -412,6 +438,11 @@ public class mod_ReactionCraft extends NetworkMod
 		        
 		        //BCD
 		        public static Item BookcasedoorItem;
+		        
+		        
+		        //Fossil Fragments
+		        public static Item DinosaurFragments;
+		        public static Item DinosaurFragments1;
 		        
 		        
 		        /**  RailCraft Items **/
@@ -543,7 +574,7 @@ public class mod_ReactionCraft extends NetworkMod
 					SkinnyColumnMulti = new BlockSkinnyCMulti(ids[6], Material.rock).setHardness(3.0F).setBlockName("SCMulti");
 					ColumnMulti = new BlockColumnMulti(ids[7], Material.rock).setHardness(3.0F).setBlockName("ColumnMulti");
 					BrickMulti = new BlockBrickMulti(ids[8], Material.rock).setHardness(3.0F).setBlockName("BrickMulti");
-					OreBlockMulti = new BlockRcOres(ids[9], Material.rock).setHardness(3.0F).setBlockName("OreMulti");
+					OreMulti = new BlockRcOres(ids[9], Material.rock).setHardness(3.0F).setBlockName("OreMulti");
 					MetalBlockMulti = new BlockRcMetalBlocks(ids[10], Material.rock).setHardness(3.0F).setBlockName("OreBlockMulti");
 					DesertBlockMulti = new BlockDesertMulti(ids[12], Material.rock).setHardness(3.0F).setBlockName("DesertBlockMulti");
 					CarpetMulti = new BlockGlowShroomCarpetMulti(ids[13], Material.rock).setHardness(3.0F).setBlockName("GlowShroomCarpetMulti");
@@ -695,137 +726,170 @@ public class mod_ReactionCraft extends NetworkMod
 			       
 			     //Custom Block Model Blocks
 		        	//Custom Blocks
-			       blockAluminium = new BlockAluminium(132, 16, net.minecraft.src.TileEntityBlockAluminium.class).setHardness(0.7F).setResistance(5F).setBlockName("blockAluminium");
+			       blockAluminium = new BlockAluminium(ids[91], 16, net.minecraft.src.Reactioncraft.TileEntityBlockAluminium.class).setHardness(0.7F).setResistance(5F).setBlockName("blockAluminium");
 		        	//Statues
-			       creeperStatue = new CreeperStatue(133, 16, net.minecraft.src.TileEntityCreeperStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("creeperStatue");
-			       HumanStatue = new HumanStatue(142, 16, net.minecraft.src.TileEntityHumanStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("HumanStatue");
-			       ZombieStatue = new ZombieStatue(143, 16, net.minecraft.src.TileEntityZombieStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("ZombieStatue");
-			       SpiderStatue = new SpiderStatue(144, 16, net.minecraft.src.TileEntitySpiderStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("SpiderStatue");
-			       cowstatue = new CowStatue(145, 16, net.minecraft.src.TileEntityCowStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("cowstatue");
-			       pigstatue = new PigStatue(146, 16, net.minecraft.src.TileEntityPigStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("pigstatue");
-			       skeletonstatue = new SkeletonStatue(147, 16, net.minecraft.src.TileEntitySkeletonStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("skeletonstatue");
-			       villagerstatue = new VillagerStatue(148, 16, net.minecraft.src.TileEntityVillagerStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("villagerstatue");
-			       endermanstatue = new EnderMStatue(149, 16, TileEntiyEndermanStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("endermanstatue");
-			       irongolemstatue = new IronGStatue(151, 16, net.minecraft.src.TileEntityIronGolemStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("irongolemstatue");
+			       creeperStatue = new CreeperStatue(ids[92], 16, net.minecraft.src.Reactioncraft.TileEntityCreeperStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("creeperStatue");
+			       HumanStatue = new HumanStatue(ids[93], 16, net.minecraft.src.Reactioncraft.TileEntityHumanStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("HumanStatue");
+			       ZombieStatue = new ZombieStatue(ids[94], 16, net.minecraft.src.Reactioncraft.TileEntityZombieStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("ZombieStatue");
+			       SpiderStatue = new SpiderStatue(ids[95], 16, net.minecraft.src.Reactioncraft.TileEntitySpiderStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("SpiderStatue");
+			       cowstatue = new CowStatue(ids[96], 16, net.minecraft.src.Reactioncraft.TileEntityCowStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("cowstatue");
+			       pigstatue = new PigStatue(ids[97], 16, net.minecraft.src.Reactioncraft.TileEntityPigStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("pigstatue");
+			       skeletonstatue = new SkeletonStatue(ids[98], 16, net.minecraft.src.Reactioncraft.TileEntitySkeletonStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("skeletonstatue");
+			       villagerstatue = new VillagerStatue(ids[99], 16, net.minecraft.src.Reactioncraft.TileEntityVillagerStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("villagerstatue");
+			       dragonstatue = new DragonStatue(ids[100], 16, net.minecraft.src.Reactioncraft.TileEntityDragonStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("dragonstatue");
+			       endermanstatue = new EnderMStatue(ids[101], 16, net.minecraft.src.Reactioncraft.TileEntiyEndermanStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("endermanstatue");
+			       irongolemstatue = new IronGStatue(ids[102], 16, net.minecraft.src.Reactioncraft.TileEntityIronGolemStatue.class).setHardness(0.7F).setResistance(5F).setBlockName("irongolemstatue");
 		        	//SnowMan
-			       Snowman = new Snowman(152, 16, net.minecraft.src.TileEntitySnowman.class).setHardness(0.7F).setResistance(5F).setBlockName("Snowman");
+			       Snowman = new Snowman(ids[103], 16, net.minecraft.src.Reactioncraft.TileEntitySnowman.class).setHardness(0.7F).setResistance(5F).setBlockName("Snowman");
 		        	//Starfish
-			       Starfish = new Starfish(153, 16, net.minecraft.src.TileEntityStarfish.class).setHardness(0.7F).setResistance(5F).setBlockName("Starfish");
+			       Starfish = new Starfish(ids[104], 16, net.minecraft.src.Reactioncraft.TileEntityStarfish.class).setHardness(0.7F).setResistance(5F).setBlockName("Starfish");
 		        
 			       
-			   //Item Code
-						BloodStoneDust = (new ItemForge(ids[91])).setIconCoord(1, 0).setItemName("BloodStoneDust");
-						BlackDiamondShard = (new ItemForge(ids[92])).setIconCoord(97, 0).setItemName("BlackDiamondShard");
-						BlackDiamondGem = (new ItemForge(ids[93])).setIconCoord(84, 0).setItemName("BlackDiamondGem");
+			       //Item Code
+						BloodStoneDust = (new ItemForge(ids[105])).setIconCoord(1, 0).setItemName("BloodStoneDust");
+						BlackDiamondShard = (new ItemForge(ids[106])).setIconCoord(97, 0).setItemName("BlackDiamondShard");
+						BlackDiamondGem = (new ItemForge(ids[107])).setIconCoord(84, 0).setItemName("BlackDiamondGem");
 						
 						
 						//raw stuff
-				         Straw = (new ItemForge(ids[94])).setIconCoord(67, 0).setItemName("Straw");
-				         Sack = (new ItemForge(ids[95])).setIconCoord(64, 0).setItemName("Sack");
-				         DriedBamboo = (new ItemForge(ids[96])).setIconCoord(68, 0).setItemName("DriedBamboo");
-				         DarkGreenDye = (new ItemForge(ids[97])).setIconCoord(65, 0).setItemName("DarkGreenDye");
-				         NetherCaneDust = (new ItemForge(ids[98])).setIconCoord(66, 0).setItemName("NetherCaneDust");
+				         Straw = (new ItemForge(ids[108])).setIconCoord(67, 0).setItemName("Straw");
+				         Sack = (new ItemForge(ids[109])).setIconCoord(64, 0).setItemName("Sack");
+				         DriedBamboo = (new ItemForge(ids[110])).setIconCoord(68, 0).setItemName("DriedBamboo");
+				         DarkGreenDye = (new ItemForge(ids[111])).setIconCoord(65, 0).setItemName("DarkGreenDye");
+				         NetherCaneDust = (new ItemForge(ids[112])).setIconCoord(66, 0).setItemName("NetherCaneDust");
 				        //Food
 				        //Doors      
 				        //Dusts
-				         ManganeseDust = (new ItemForge(ids[99])).setIconCoord(87, 0).setItemName("ManganeseDust");
-				         ZincDust = (new ItemForge(ids[100])).setIconCoord(96, 0).setItemName("ZincDust");
+				         ManganeseDust = (new ItemForge(ids[113])).setIconCoord(87, 0).setItemName("ManganeseDust");
+				         ZincDust = (new ItemForge(ids[114])).setIconCoord(96, 0).setItemName("ZincDust");
 				        //Liquids
+				         
+				         
 				        //DragonStone-BloodStone Tools
-				         BloodStoneHoe = (new BloodStoneSword(ids[101], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(89, 0).setItemName("BloodStoneSword");
-				         BloodStoneAxe = (new BloodStoneSword(ids[102], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(86, 0).setItemName("BloodStoneSword");
-				         BloodStoneShovel = (new BloodStoneSword(ids[], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(88, 0).setItemName("BloodStoneSword");
-				         BloodStoneSword = (new BloodStoneSword(ids[], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(5, 0).setItemName("BloodStoneSword");
-				         BloodStonePicAxe = (new BloodStonePicaxe(ids[], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(85, 0).setItemName("BloodStonePixAxe");
+				         BloodStoneHoe = (new BloodStoneSword(ids[115], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(89, 0).setItemName("BloodStoneSword");
+				         BloodStoneAxe = (new BloodStoneSword(ids[116], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(86, 0).setItemName("BloodStoneSword");
+				         BloodStoneShovel = (new BloodStoneSword(ids[117], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(88, 0).setItemName("BloodStoneSword");
+				         BloodStoneSword = (new BloodStoneSword(ids[118], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(5, 0).setItemName("BloodStoneSword");
+				         BloodStonePicAxe = (new BloodStonePicaxe(ids[119], EnumRcToolMaterial.BLOODSTONE)).setIconCoord(85, 0).setItemName("BloodStonePixAxe");
 				        //Bone Stools
-				         BonePicAxe = (new BloodStoneSword(ids[], EnumRcToolMaterial.Bone)).setIconCoord(99, 0).setItemName("BonePicAxe");
+				         BonePicAxe = (new BloodStoneSword(ids[120], EnumRcToolMaterial.Bone)).setIconCoord(99, 0).setItemName("BonePicAxe");
 				            //Gems
-				         WhiteDiamondShard = (new ItemForge(ids[])).setIconCoord(98, 0).setItemName("WhiteDiamond");
-				         BlackDiamondGem = (new ItemForge(ids[])).setIconCoord(97, 0).setItemName("BlackDiamond1");
+				         WhiteDiamondShard = (new ItemForge(ids[121])).setIconCoord(98, 0).setItemName("WhiteDiamond");
+				         BlackDiamondGem = (new ItemForge(ids[122])).setIconCoord(97, 0).setItemName("BlackDiamond1");
 				        //Armor?
 				       
-				         SuperHeatedIron = (new ItemForge(ids[])).setIconCoord(81, 0).setItemName("SuperHeatedIron");
-				         ChainLoop = (new ItemForge(ids[])).setIconCoord(82, 0).setItemName("ChainLoop");
-				         ChainLoops = (new ItemForge(ids[])).setIconCoord(83, 0).setItemName("ChainLoops");
-				         BlackDiamondShard = (new ItemForge(ids[])).setIconCoord(84, 0).setItemName("BlackDiamond2");
-				         SteelIngot = (new ItemForge(ids[])).setIconCoord(16, 0).setItemName("SteelIngot");
+				         SuperHeatedIron = (new ItemForge(ids[123])).setIconCoord(81, 0).setItemName("SuperHeatedIron");
+				         ChainLoop = (new ItemForge(ids[124])).setIconCoord(82, 0).setItemName("ChainLoop");
+				         ChainLoops = (new ItemForge(ids[125])).setIconCoord(83, 0).setItemName("ChainLoops");
+				         BlackDiamondShard = (new ItemForge(ids[126])).setIconCoord(84, 0).setItemName("BlackDiamond2");
+				         SteelIngot = (new ItemForge(ids[127])).setIconCoord(16, 0).setItemName("SteelIngot");
 				         
 				         //Fossil Items
-				        DinosaurFragments = (new RcForgeItem(ids[])).setIconCoord("fix", 0).setItemName("DinosaurFragments");
-				        DinosaurFragments1 = (new RcForgeItem(ids[])).setIconCoord("fix", 0).setItemName("DinosaurFragments1");
+				        DinosaurFragments = (new ItemForge(ids[128])).setIconCoord(0, 0).setItemName("DinosaurFragments");
+				        DinosaurFragments1 = (new ItemForge(ids[129])).setIconCoord(0, 0).setItemName("DinosaurFragments1");
 
 				         
-				         SandStonePaste = (new ItemForge(ids[])).setIconCoord(119, 0).setItemName("SandStonePaste");
-				         Flintchisel = (new ItemForge(ids[])).setIconCoord(110, 0).setItemName("Flintchisel");
-				         Goldchisel = (new ItemForge(ids[])).setIconCoord(113, 0).setItemName("Goldchisel");
+				         SandStonePaste = (new ItemForge(ids[130])).setIconCoord(119, 0).setItemName("SandStonePaste");
+				         Flintchisel = (new ItemForge(ids[131])).setIconCoord(110, 0).setItemName("Flintchisel");
+				         Goldchisel = (new ItemForge(ids[132])).setIconCoord(113, 0).setItemName("Goldchisel");
 				       
 				        //foods and items to fix textures on
 				                //foods
-				         AncientFruit = (new ItemFoodRc(ids[], 4, 1F, false)).setIconCoord(100, 0).setItemName("AncientFruit");
-				         Bacon = (new ItemFoodRc(ids[], 4, 1F, false)).setIconCoord(111, 0).setItemName("Bacon");
-				         RawBacon = (new ItemForge(ids[])).setIconCoord(126, 0).setItemName("RawBacon");
-				         ChickenNuggets = (new ItemFoodRc(ids[], 4, 1F, false)).setIconCoord(122, 0).setItemName("ChichenNuggets");
-				         RawNuggets = (new ItemForge(ids[])).setIconCoord(127, 0).setItemName("RawNuggets");        
-				         SBread = (new ItemFoodRc(ids[], 4, 1F, false)).setIconCoord(124, 0).setItemName("SBread");
-				         SteakSandwich = (new ItemFoodRc(ids[], 4, 1F, false)).setIconCoord(125, 0).setItemName("SteakSandWich");
+				         AncientFruit = (new ItemFoodRc(ids[133], 4, 1F, false)).setIconCoord(100, 0).setItemName("AncientFruit");
+				         Bacon = (new ItemFoodRc(ids[134], 4, 1F, false)).setIconCoord(111, 0).setItemName("Bacon");
+				         RawBacon = (new ItemForge(ids[135])).setIconCoord(126, 0).setItemName("RawBacon");
+				         ChickenNuggets = (new ItemFoodRc(ids[136], 4, 1F, false)).setIconCoord(122, 0).setItemName("ChichenNuggets");
+				         RawNuggets = (new ItemForge(ids[137])).setIconCoord(127, 0).setItemName("RawNuggets");        
+				         SBread = (new ItemFoodRc(ids[138], 4, 1F, false)).setIconCoord(124, 0).setItemName("SBread");
+				         SteakSandwich = (new ItemFoodRc(ids[139], 4, 1F, false)).setIconCoord(125, 0).setItemName("SteakSandWich");
 				                //Tools
-				         Knife = (new ItemForge(ids[])).setIconCoord(123, 0).setItemName("Knfie");
+				         Knife = (new ItemForge(ids[140])).setIconCoord(123, 0).setItemName("Knfie");
 		                       
-				         DBDesertGem = (new ItemForge(ids[])).setIconCoord(132, 0).setItemName("DBDesertGem");
-				         DBDesertShard = (new ItemForge(ids[])).setIconCoord(129, 0).setItemName("DBDesertGem1");
-				         LBDesertShard = (new ItemForge(ids[])).setIconCoord(130, 0).setItemName("LBDesertGem1");
-				         LBDesertGem = (new ItemForge(ids[])).setIconCoord(131, 0).setItemName("LBDesertGem");
+				         DBDesertGem = (new ItemForge(ids[141])).setIconCoord(132, 0).setItemName("DBDesertGem");
+				         DBDesertShard = (new ItemForge(ids[142])).setIconCoord(129, 0).setItemName("DBDesertGem1");
+				         LBDesertShard = (new ItemForge(ids[143])).setIconCoord(130, 0).setItemName("LBDesertGem1");
+				         LBDesertGem = (new ItemForge(ids[144])).setIconCoord(131, 0).setItemName("LBDesertGem");
 				                //buckets
-				         MagmaBucket = (new ItemForge(ids[])).setIconCoord(113, 0).setItemName("MagmaBucket");
+				         MagmaBucket = (new ItemForge(ids[145])).setIconCoord(113, 0).setItemName("MagmaBucket");
 				        //
-				         StoneHammer = (new ItemForge(ids[])).setIconCoord(114, 0).setItemName("StoneHammer");
+				         StoneHammer = (new ItemForge(ids[146])).setIconCoord(114, 0).setItemName("StoneHammer");
 				        //
-				         IBamboo = (new ItemBamboo(ids[])).setIconCoord(136, 0).setItemName("IBamboo");
+				         IBamboo = (new ItemBamboo(ids[147])).setIconCoord(136, 0).setItemName("IBamboo");
 		       
 		                //Flag
-		                 FlagItem1 = (new ItemForge(ids[])).setIconCoord(141, 0).setItemName("FlagItem1");
+		                 FlagItem1 = (new ItemForge(ids[148])).setIconCoord(141, 0).setItemName("FlagItem1");
 		               
 		               
 		                //
-		                 BagofGold = (new ItemForge(ids[])).setIconCoord(140, 0).setItemName("BagofGold");
-		                 BagofSilver = (new ItemForge(ids[])).setIconCoord(143, 0).setItemName("BagofSilver");
-		                 BagofDiamond = (new ItemForge(ids[])).setIconCoord(139, 0).setItemName("BagofDiamond");
-		                 Bag = (new ItemForge(ids[])).setIconCoord(145, 0).setItemName("Bag");
+		                 BagofGold = (new ItemForge(ids[149])).setIconCoord(140, 0).setItemName("BagofGold");
+		                 BagofSilver = (new ItemForge(ids[150])).setIconCoord(143, 0).setItemName("BagofSilver");
+		                 BagofDiamond = (new ItemForge(ids[151])).setIconCoord(139, 0).setItemName("BagofDiamond");
+		                 Bag = (new ItemForge(ids[152])).setIconCoord(145, 0).setItemName("Bag");
 		               
 		                //more desert stuff
-		                 Papyrus = (new ItemForge(ids[])).setIconCoord(121, 0).setItemName("Papyrus");
-		                 Reed = (new ItemReedRc(ids[])).setIconCoord(142, 0).setItemName("Reed");
-		                 Scroll = (new ItemForge(ids[])).setIconCoord(120, 0).setItemName("Scroll");
-		                 MagmaFlint = (new ItemForge(ids[])).setIconCoord(138, 0).setItemName("MagmaFlint");
+		                 Papyrus = (new ItemForge(ids[153])).setIconCoord(121, 0).setItemName("Papyrus");
+		                 Reed = (new ItemReedRc(ids[154])).setIconCoord(142, 0).setItemName("Reed");
+		                 Scroll = (new ItemForge(ids[155])).setIconCoord(120, 0).setItemName("Scroll");
+		                 MagmaFlint = (new ItemForge(ids[156])).setIconCoord(138, 0).setItemName("MagmaFlint");
 		               
 		               
 		                //Fixed Textured Ingots
-		                 RefinedGoldIngot = (new ItemForge(ids[])).setIconCoord(62, 0).setItemName("RefinedGoldIngot");
-		                 RefinedSilverIngot = (new ItemForge(ids[])).setIconCoord(61, 0).setItemName("RefinedSilverIngot");
-		                 SilverIngot = (new ItemForge(ids[])).setIconCoord(61, 0).setItemName("SilverIngot");
-				         BrassIngot = (new ItemForge(ids[])).setIconCoord(60, 0).setItemName("BrassIngot");
-				         ObsidianIngot = (new ItemForge(ids[])).setIconCoord(23, 0).setItemName("ObsidianIngot");
-				         BloodStoneIngot = (new ItemForge(ids[])).setIconCoord(6, 0).setItemName("BloodStoneIngot");
-				         MithrilIngot = (new ItemForge(ids[])).setIconCoord(17, 0).setItemName("MithrilIngot");
-				         CobaltIngot = (new ItemForge(ids[])).setIconCoord(44, 0).setItemName("CobaltIngot");
-				         TitaniumIngot = (new ItemForge(ids[])).setIconCoord(10, 0).setItemName("TitaniumIngot");
-				         TinIngot = (new ItemForge(ids[])).setIconCoord(29, 0).setItemName("TinIngot");
-				         AdamantiteIngot = (new ItemForge(ids[])).setIconCoord(71, 0).setItemName("AdamantiteIngot");
-				         CopperIngot = (new ItemForge(ids[])).setIconCoord(72, 0).setItemName("CopperIngot");
-				         PlatinumIngot = (new ItemForge(ids[])).setIconCoord(28, 0).setItemName("PlatinumIngot");
-				         ManganeseIngot = (new ItemForge(ids[])).setIconCoord(95, 0).setItemName("ManganeseIngot");
-				         OnyxIngot = (new ItemForge(ids[])).setIconCoord(137, 0).setItemName("OnyxIngot");
-		                 IridiumIngot = (new ItemForge(ids[])).setIconCoord(137, 0).setItemName("IridiumIngot");
-		                 CalciteIngot = (new ItemForge(ids[])).setIconCoord(137, 0).setItemName("CalciteIngot");
-		                 AmethystIngot = (new ItemForge(ids[])).setIconCoord(135, 0).setItemName("AmethystIngot");
-		                 DaeyaltIngot = (new ItemForge(ids[])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 RefinedGoldIngot = (new ItemForge(ids[157])).setIconCoord(62, 0).setItemName("RefinedGoldIngot");
+		                 RefinedSilverIngot = (new ItemForge(ids[158])).setIconCoord(61, 0).setItemName("RefinedSilverIngot");
+		                 SilverIngot = (new ItemForge(ids[159])).setIconCoord(61, 0).setItemName("SilverIngot");
+				         BrassIngot = (new ItemForge(ids[160])).setIconCoord(60, 0).setItemName("BrassIngot");
+				         ObsidianIngot = (new ItemForge(ids[161])).setIconCoord(23, 0).setItemName("ObsidianIngot");
+				         BloodStoneIngot = (new ItemForge(ids[162])).setIconCoord(6, 0).setItemName("BloodStoneIngot");
+				         MithrilIngot = (new ItemForge(ids[163])).setIconCoord(17, 0).setItemName("MithrilIngot");
+				         CobaltIngot = (new ItemForge(ids[164])).setIconCoord(44, 0).setItemName("CobaltIngot");
+				         TitaniumIngot = (new ItemForge(ids[165])).setIconCoord(10, 0).setItemName("TitaniumIngot");
+				         TinIngot = (new ItemForge(ids[166])).setIconCoord(29, 0).setItemName("TinIngot");
+				         AdamantiteIngot = (new ItemForge(ids[167])).setIconCoord(71, 0).setItemName("AdamantiteIngot");
+				         CopperIngot = (new ItemForge(ids[168])).setIconCoord(72, 0).setItemName("CopperIngot");
+				         PlatinumIngot = (new ItemForge(ids[169])).setIconCoord(28, 0).setItemName("PlatinumIngot");
+				         ManganeseIngot = (new ItemForge(ids[170])).setIconCoord(95, 0).setItemName("ManganeseIngot");
+				         OnyxIngot = (new ItemForge(ids[171])).setIconCoord(137, 0).setItemName("OnyxIngot");
+		                 IridiumIngot = (new ItemForge(ids[172])).setIconCoord(137, 0).setItemName("IridiumIngot");
+		                 CalciteIngot = (new ItemForge(ids[173])).setIconCoord(137, 0).setItemName("CalciteIngot");
+		                 AmethystIngot = (new ItemForge(ids[174])).setIconCoord(135, 0).setItemName("AmethystIngot");
+		                 DaeyaltIngot = (new ItemForge(ids[175])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 
+		                 //"Herb" Plants trololololololol
+		                 Block OrangeKush = new BlockOK(134, 1).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
+		                 Block Blueberryyy = new BlockBbyyy(135, 16).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  	             	
+		             	 LemonKush = new BlockLK(136, 32).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
+		             	 Block BlueDream = new BlockBD(137, 48).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
+		             	 Fire = new BlockKF(138, 64).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
+		             	 Crystal = new BlockCK(139, 80).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  
+		             	
+		                 
+		                 
+		                 //Seeds
+		                 BlueDreamSeed = (new AncientSeeds(4006, mod_ReactionCraft.BlueDream.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
+		                 BYYSeed = (new AncientSeeds(4005, mod_ReactionCraft.Blueberryyy.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
+		                 CrystalSeed = (new AncientSeeds(4004, mod_ReactionCraft.Crystal.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
+		                 FireSeed = (new AncientSeeds(4003, mod_ReactionCraft.Fire.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
+		                 LKSeed = (new AncientSeeds(4002, mod_ReactionCraft.LemonKush.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
+		                 OKSeed = (new AncientSeeds(4001, mod_ReactionCraft.OrangeKush.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");	
+		                 WildKSeed = new AncientSeeds(4002, mod_ReactionCraft.OrangeKush.blockID, Block.tilledField.blockID).setIconCoord(134, 0).setItemName("AncientSeeds");	
+		                 
+		                 	                 
+		                 //Leaves
+		                 BlueDreamBud = (new ItemForge(6100)).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 BYYBud = (new ItemForge(3100)).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 CrystalBud = (new ItemForge(5200)).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 FireBud = (new ItemForge(6300)).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 LKBud = (new ItemForge(6400)).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 OKBud = (new ItemForge(6000)).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 Toke = (new ItemForge(7000)).setIconCoord(134, 0).setItemName("OkLeaf");
+		                 
+		                 
+		                 
+		                 /** RailCraft Items **/
+		                 BloodStoneBorehead = (new IBloodstoneBH(ids[174])).setIconCoord(151, 0).setItemName("BloodstoneBorehead");	
+		                 BlackdiamondBoreHead = (new IBlackDiamondBH(ids[175])).setIconCoord(150, 0).setItemName("BloodstoneBorehead");	
 				
-				
-		                 BloodstoneBorehead = (new IBloodstoneBH(ids[])).setIconCoord(151, 0).setItemName("BloodstoneBorehead");	
-		 		    	
-		 		    	 BlackdiamondBorehead = (new IBlackDiamondBH(ids[])).setIconCoord(150, 0).setItemName("BloodstoneBorehead");	
-				
-				
+
 			   //Achievements
 		       DownloadReactionCraft = (new Achievement(999, "Downloaded ReactionCraft", 0, 2, FlowerMulti, AchievementList.openInventory)).registerAchievement();
 		       Nether = (new Achievement(1000, "Welcome to Hell", -6, -5, BloodStone, null)).registerAchievement();
@@ -852,22 +916,23 @@ public class mod_ReactionCraft extends NetworkMod
 		        AddMob();
 		        TileEntites();
 		        Bonemeal();
+		        CustomBlockModels();
 		        //End Voids		        
 	}
 	
 	
 	public void SetTextures()
 	{
-		MinecraftForgeClient.preloadTexture("/reactioncraft/Blocks.png");
-		MinecraftForgeClient.preloadTexture("/reactioncraft/ExtraBlocks.png");
-		MinecraftForgeClient.preloadTexture("/reactioncraft/Items.png");
-		MinecraftForgeClient.preloadTexture("/reactioncraft/RcFalseBlocks.png");
-		MinecraftForgeClient.preloadTexture("/reactioncraft/Liquids.png");
-		MinecraftForgeClient.preloadTexture("/reactioncraft/Flags.png");
-		MinecraftForgeClient.preloadTexture("/reactioncraft/extendedcolumn.png");
-		MinecraftForgeClient.preloadTexture("/reactioncraft/plants.png");
-		MinecraftForgeClient.preloadTexture("/reactioncraft/guiblock.png");
-		MinecraftForgeClient.preloadTexture("/reactioncraft/furnace.png");
+		MinecraftForgeClient.preloadTexture("/reactioncraft/rcs/Blocks.png");
+		MinecraftForgeClient.preloadTexture("/reactioncraft/rcs/ExtraBlocks.png");
+		MinecraftForgeClient.preloadTexture("/reactioncraft/rcs/Items.png");
+		MinecraftForgeClient.preloadTexture("/reactioncraft/rcs/RcFalseBlocks.png");
+		MinecraftForgeClient.preloadTexture("/reactioncraft/rcs/Liquids.png");
+		MinecraftForgeClient.preloadTexture("/reactioncraft/rcs/Flags.png");
+		MinecraftForgeClient.preloadTexture("/reactioncraft/rcs/extendedcolumn.png");
+		MinecraftForgeClient.preloadTexture("/reactioncraft/rcs/plants.png");
+		MinecraftForgeClient.preloadTexture("/reactioncraft/rcs/guiblock.png");
+		MinecraftForgeClient.preloadTexture("/reactioncraft/rcs/furnace.png");
 	}
 	
 	
@@ -937,7 +1002,7 @@ public class mod_ReactionCraft extends NetworkMod
 	        //Bricks
 	        ModLoader.registerBlock(BrickMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Ores
-	        ModLoader.registerBlock(OreBlockMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
+	        ModLoader.registerBlock(OreMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Ore Blocks
 	        ModLoader.registerBlock(MetalBlockMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Desert Blocks
@@ -952,6 +1017,63 @@ public class mod_ReactionCraft extends NetworkMod
 	        ModLoader.registerBlock(ShellMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
 	        //Lanterns
 	        ModLoader.registerBlock(LanternMulti, net.minecraft.src.Reactioncraft.ItemMulti.class);
+	        
+	        
+	        //Custom Block Models
+			ModLoader.registerBlock(blockAluminium);
+			ModLoader.registerBlock(creeperStatue);
+			ModLoader.registerBlock(NetherfurnaceIA);
+			ModLoader.registerBlock(NetherfurnaceA);
+			ModLoader.registerBlock(creeperStatue);
+			ModLoader.registerBlock(HumanStatue);
+			ModLoader.registerBlock(ZombieStatue);
+			ModLoader.registerBlock(SpiderStatue);
+			ModLoader.registerBlock(cowstatue);
+			ModLoader.registerBlock(pigstatue);
+			ModLoader.registerBlock(skeletonstatue);
+			ModLoader.registerBlock(villagerstatue);
+			ModLoader.registerBlock(endermanstatue);
+			ModLoader.registerBlock(dragonstatue);
+			ModLoader.registerBlock(irongolemstatue);
+	}
+	
+	public void CustomBlockModels()
+	{
+		BlockAluminiumRender render = new BlockAluminiumRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntityBlockAluminium.class,"AluBlockTileEntity", render);
+        
+        net.minecraft.src.Reactioncraft.CreeperStatueRender render1 = new CreeperStatueRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntityCreeperStatue.class,"CreeperStatueTileEntity", render1);
+        
+        net.minecraft.src.Reactioncraft.HumanStatueRender render2 = new HumanStatueRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntityHumanStatue.class, "HumanStatueTileEntity", render2);
+        
+        net.minecraft.src.Reactioncraft.ZombieStatueRender render3 = new ZombieStatueRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntityZombieStatue.class, "ZommbieStatueTileEntity", render3);
+        
+        net.minecraft.src.Reactioncraft.SpiderStatueRender render4 = new SpiderStatueRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntitySpiderStatue.class, "SpiderStatueTileEntity" , render4);
+        
+        net.minecraft.src.Reactioncraft.CowStatueRender render5 = new CowStatueRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntityCowStatue.class, "CowStatueTileEntity" , render5);
+        
+        net.minecraft.src.Reactioncraft.PigStatueRender render6 = new PigStatueRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntityPigStatue.class, "PigStatueTileEntity" , render6);
+        
+        net.minecraft.src.Reactioncraft.SkeletonStatueRender render7 = new SkeletonStatueRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntitySkeletonStatue.class, "SkeletonStatueTileEntity", render7);
+        
+        net.minecraft.src.Reactioncraft.VillagerStatueRender render8 = new VillagerStatueRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntityVillagerStatue.class, "VillagerStatueTileEntity", render8);
+        
+        net.minecraft.src.Reactioncraft.EndermanStatueRender render9 = new EndermanStatueRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntiyEndermanStatue.class, "EndermanTileEntity", render9);
+        
+        net.minecraft.src.Reactioncraft.DragonStatueRender render10 = new DragonStatueRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntityDragonStatue.class, "DragonStatueTileEntity" , render10);
+        
+        net.minecraft.src.Reactioncraft.IronGolemStatueRender render11 = new IronGolemStatueRender();
+        ModLoader.registerTileEntity(net.minecraft.src.Reactioncraft.TileEntityIronGolemStatue.class, "IronGolemStatueTileEntity", render11);
 	}
 	
 	
@@ -1037,22 +1159,22 @@ public class mod_ReactionCraft extends NetworkMod
             
             
 	        //Ores!
-	        ModLoader.addName(new ItemStack(OreBlockMulti, 1),     "Platinum Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 1),  "Iron Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 2),  "Gold Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 3),  "Tin Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 4),  "Copper Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 5),  "Mithril Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 6),  "Adamantite Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 7),  "Daeyalt Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 8),  "Zinc Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 9),  "Cobalt Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 10), "Titanium Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 11), "Silver Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 12), "Amethyst Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 13), "Calcite Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 14), "Vectrite Ore");
-            ModLoader.addName(new ItemStack(OreBlockMulti, 1, 15), "Manganese Ore");
+	        ModLoader.addName(new ItemStack(OreMulti, 1),     "Platinum Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 1),  "Iron Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 2),  "Gold Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 3),  "Tin Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 4),  "Copper Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 5),  "Mithril Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 6),  "Adamantite Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 7),  "Daeyalt Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 8),  "Zinc Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 9),  "Cobalt Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 10), "Titanium Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 11), "Silver Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 12), "Amethyst Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 13), "Calcite Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 14), "Vectrite Ore");
+            ModLoader.addName(new ItemStack(OreMulti, 1, 15), "Manganese Ore");
 	        
 	        
             //
@@ -1078,6 +1200,21 @@ public class mod_ReactionCraft extends NetworkMod
             //Lanterns
             ModLoader.addName(new ItemStack(LanternMulti, 1),    "Lantern");
             ModLoader.addName(new ItemStack(LanternMulti, 1, 1), "Lantern");
+            
+            //Custom Block Models
+            ModLoader.addName(blockAluminium, "Gold Bars");
+    		ModLoader.addName(creeperStatue, "Creeper Statue");
+    		ModLoader.addName(BloodStoneBorehead, "Bloodstone BoreHead");
+    		ModLoader.addName(HumanStatue, "Human Statue");
+    		ModLoader.addName(ZombieStatue, "Zombie Statue");
+    		ModLoader.addName(SpiderStatue, "Spider Statue");
+    		ModLoader.addName(cowstatue, "Cow Statue");
+    		ModLoader.addName(pigstatue, "Pig Statue");
+    		ModLoader.addName(skeletonstatue, "Skeleton Statue");
+    		ModLoader.addName(villagerstatue, "Villager Statue");
+    		ModLoader.addName(endermanstatue, "Enderman Statue");
+    		ModLoader.addName(dragonstatue, " Dragon Statue");
+    		ModLoader.addName(irongolemstatue, "Iron Golem Statue");
 	}
 	
 	
@@ -1093,30 +1230,30 @@ public class mod_ReactionCraft extends NetworkMod
 	
 	//OreMulti Meta Smelts
 		//mithril
-        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 5, new ItemStack(mod_ReactionCraft.MithrilIngot));
+        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 5, new ItemStack(mod_ReactionCraft.MithrilIngot));
         //silver related
-        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 11, new ItemStack(SilverIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 11, new ItemStack(SilverIngot, 1));
         //cobalt
-        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 9, new ItemStack(CobaltIngot, 1));                       
+        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 9, new ItemStack(CobaltIngot, 1));                       
         //adamantite
-        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 6, new ItemStack(AdamantiteIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 6, new ItemStack(AdamantiteIngot, 1));
         //Copper
-        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 4, new ItemStack(CopperIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 4, new ItemStack(CopperIngot, 1));
         //Tin
-        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 3, new ItemStack(TinIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 3, new ItemStack(TinIngot, 1));
         //Calcite
-        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 13, new ItemStack(CalciteIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 13, new ItemStack(CalciteIngot, 1));
         //Amethyst
-        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 12, new ItemStack(AmethystIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 12, new ItemStack(AmethystIngot, 1));
         //Dayealt
-        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 7, new ItemStack(DaeyaltIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 7, new ItemStack(DaeyaltIngot, 1));
         //Titanium
-        FurnaceRecipes.smelting().addSmelting(OreBlockMulti.blockID, 10, new ItemStack(TitaniumIngot, 1));
+        FurnaceRecipes.smelting().addSmelting(OreMulti.blockID, 10, new ItemStack(TitaniumIngot, 1));
         
         
         
         //platinum
-        ModLoader.addSmelting(OreBlockMulti.blockID, new ItemStack(PlatinumIngot, 1));
+        ModLoader.addSmelting(OreMulti.blockID, new ItemStack(PlatinumIngot, 1));
         
         //Misc Recipes\\
         
@@ -1412,7 +1549,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(30);
             int i2 = baseZ + rand.nextInt(16);
-            (new WorldGenMinable(OreBlockMulti.blockID, 8)).generate(world, rand, i1, k1, i2);
+            (new WorldGenMinable(OreMulti.blockID, 8)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1421,7 +1558,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(30);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 3)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 3)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1430,7 +1567,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(40);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 4)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 4)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1439,7 +1576,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(40);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 5)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 5)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1448,7 +1585,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(45);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 6)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 6)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1457,7 +1594,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(45);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 7)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 7)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1466,7 +1603,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(50);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 8)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 8)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1475,7 +1612,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(50);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 9)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 9)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1484,7 +1621,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(55);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 10)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 10)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1493,7 +1630,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(55);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 11)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 11)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1502,7 +1639,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(55);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 12)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 12)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1511,7 +1648,7 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(32);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 13)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 13)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1520,7 +1657,7 @@ public class mod_ReactionCraft extends NetworkMod
         	int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(31);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 14)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 14)).generate(world, rand, i1, k1, i2);
         }
         
         //
@@ -1529,7 +1666,7 @@ public class mod_ReactionCraft extends NetworkMod
         	int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(30);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 8, 15)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 8, 15)).generate(world, rand, i1, k1, i2);
         }
         
         //Iron scarecly at 12 , more frequently at 40
@@ -1538,14 +1675,14 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(12);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 3, 1)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 3, 1)).generate(world, rand, i1, k1, i2);
         }
         for(int k = 0; k < 15; k++)
         {
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(40);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 5, 1)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 5, 1)).generate(world, rand, i1, k1, i2);
         }
         
         //Gold gold ore found at 27, scarcely 18, 22
@@ -1554,21 +1691,21 @@ public class mod_ReactionCraft extends NetworkMod
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(18);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 1, 2)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 1, 2)).generate(world, rand, i1, k1, i2);
         }
         for(int k = 0; k < 10; k++)
         {
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(22);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 2, 2)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 2, 2)).generate(world, rand, i1, k1, i2);
         }
         for(int k = 0; k < 15; k++)
         {
             int i1 = baseX + rand.nextInt(16);
             int k1 = rand.nextInt(27);
             int i2 = baseZ + rand.nextInt(16);
-            (new GenMetaMinable(OreBlockMulti.blockID, 5, 2)).generate(world, rand, i1, k1, i2);
+            (new GenMetaMinable(OreMulti.blockID, 5, 2)).generate(world, rand, i1, k1, i2);
         }
         
         //Magma Block

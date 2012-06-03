@@ -36,7 +36,7 @@ public class BlockCrate extends BlockContainer implements ITextureProvider
     @Override
 	public String getTextureFile() {
 		// TODO Auto-generated method stub
-		return "/reactioncraft/Blocks.png";
+		return "/reactioncraft/rcs/Blocks.png";
 	}
     
     public void addCreativeItems(ArrayList itemList)

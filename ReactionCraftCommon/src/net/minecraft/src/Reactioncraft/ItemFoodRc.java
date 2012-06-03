@@ -18,6 +18,6 @@ public class ItemFoodRc extends ItemFood implements ITextureProvider
     }
 	public String getTextureFile()
 	{
-		return "/reactioncraft/Items.png";
+		return "/reactioncraft/rcs/Items.png";
 	}
 }

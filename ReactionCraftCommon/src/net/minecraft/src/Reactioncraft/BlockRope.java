@@ -77,7 +77,7 @@ public class BlockRope extends Block implements ITextureProvider
             this.setBlockBounds(0.0F, 0.0F, 0.0F, var6, 1.0F, 1.0F);
         }
 
-        return super.getSelectedBoundingBoxFromPool(par1World, par2, par3, par4);
+        return super.getCollisionBoundingBoxFromPool(par1World, par2, par3, par4);
     }
 
     /**
@@ -207,6 +207,6 @@ public class BlockRope extends Block implements ITextureProvider
 	@Override
 	public String getTextureFile() {
 		// TODO Auto-generated method stub
-		return "/reactioncraft/Blocks.png";
+		return "/reactioncraft/rcs/Blocks.png";
 	}
 }

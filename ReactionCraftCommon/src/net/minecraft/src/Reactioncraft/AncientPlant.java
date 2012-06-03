@@ -34,7 +34,7 @@ public class AncientPlant extends BlockFlower implements ITextureProvider
     @Override
 	public String getTextureFile() {
 		// TODO Auto-generated method stub
-		return "/reactioncraft/plants.png";
+		return "/reactioncraft/rcs/plants.png";
 	}
     //End Eragonn Code
     /**

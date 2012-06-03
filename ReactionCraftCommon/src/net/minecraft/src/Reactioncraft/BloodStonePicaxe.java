@@ -76,6 +76,6 @@ public class BloodStonePicaxe extends ItemToolRc implements ITextureProvider
     
     public String getTextureFile()
 	{
-		return "/reactioncraft/Items.png";
+		return "/reactioncraft/rcs/Items.png";
 	}
 }

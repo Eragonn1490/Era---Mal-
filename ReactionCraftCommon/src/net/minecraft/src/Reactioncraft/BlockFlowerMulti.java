@@ -82,6 +82,11 @@ public class BlockFlowerMulti extends Block implements ITextureProvider
     		case 7: return 0.0F;
     		case 8: return 0.0F;
     		case 9: return 0.0F;
+    		case 10: return 0.0F;
+    		case 11: return 0.0F;
+    		case 12: return 0.0F;
+    		case 13: return 0.0F;
+    		case 14: return 0.0F;
     		default: return 0.0F;
     	}
 
@@ -92,7 +97,7 @@ public class BlockFlowerMulti extends Block implements ITextureProvider
     {
         switch(i)
             {
-                case 0: return mod_ReactionCraft.FlowerMulti.blockID;
+                default: return mod_ReactionCraft.FlowerMulti.blockID;
                 case 1: return mod_ReactionCraft.FlowerMulti.blockID;
                 case 2: return mod_ReactionCraft.FlowerMulti.blockID;
                 case 3: return mod_ReactionCraft.FlowerMulti.blockID;
@@ -107,13 +112,13 @@ public class BlockFlowerMulti extends Block implements ITextureProvider
                 case 12: return mod_ReactionCraft.FlowerMulti.blockID;
                 case 13: return mod_ReactionCraft.FlowerMulti.blockID;
                 case 14: return mod_ReactionCraft.FlowerMulti.blockID;
-                default: return mod_ReactionCraft.FlowerMulti.blockID;
+                case 15: return mod_ReactionCraft.FlowerMulti.blockID;
             }
     }
 
 
     public int quantityDropped(int meta, int fortune, Random random)
-{
+    {
    switch(meta)
         {
             case 0: return 1;
@@ -131,9 +136,10 @@ public class BlockFlowerMulti extends Block implements ITextureProvider
             case 12: return 1;
             case 13: return 1;
             case 14: return 1;
-            default: return 1;
+            case 15: return 1;
         }
-}
+		return fortune;
+	}
     
     
     protected int damageDropped(int i)
@@ -155,8 +161,9 @@ public class BlockFlowerMulti extends Block implements ITextureProvider
             case 12: return 12;
             case 13: return 13;
             case 14: return 14;
-            default: return 15;
+            case 15: return 15;
         }
+		return i;
     }
     
     
@@ -196,6 +203,8 @@ public class BlockFlowerMulti extends Block implements ITextureProvider
         case 14: return 57;
         //Flowers-behind poinsettias
         case 15: return 60;
+        //Crystal- (Regular Kush that generates randomly in the world but rarely)
+        case 16: return 60;
         }
         return meta;
     }
@@ -209,6 +218,6 @@ public class BlockFlowerMulti extends Block implements ITextureProvider
     
     public String getTextureFile()
     {
-        return "/reactioncraft/Blocks.png";
+        return "/reactioncraft/rcs/Blocks.png";
     }
 }

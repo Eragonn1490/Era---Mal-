@@ -194,7 +194,7 @@ public class BlockSlabRc extends Block implements ITextureProvider
            
         public String getTextureFile()
         {
-                return "/reactioncraft/Blocks.png";
+                return "/reactioncraft/rcs/Blocks.png";
         }
        
         public int idDropped(int i, Random random)

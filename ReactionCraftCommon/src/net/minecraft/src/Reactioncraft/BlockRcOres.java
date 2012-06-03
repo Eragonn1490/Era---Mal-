@@ -47,23 +47,23 @@ public class BlockRcOres extends Block implements ITextureProvider
     {
         switch(i)
             {
-                case 0: return mod_ReactionCraft.OreBlockMulti.blockID;
+                case 0: return mod_ReactionCraft.OreMulti.blockID;
                 case 1: return mod_ReactionCraft.IronDust.shiftedIndex;
                 case 2: return mod_ReactionCraft.GoldClump.shiftedIndex;
-                case 3: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 4: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 5: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 6: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 7: return mod_ReactionCraft.OreBlockMulti.blockID;
+                case 3: return mod_ReactionCraft.OreMulti.blockID;
+                case 4: return mod_ReactionCraft.OreMulti.blockID;
+                case 5: return mod_ReactionCraft.OreMulti.blockID;
+                case 6: return mod_ReactionCraft.OreMulti.blockID;
+                case 7: return mod_ReactionCraft.OreMulti.blockID;
                 case 8: return mod_ReactionCraft.ZincDust.shiftedIndex;
-                case 9: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 10: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 11: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 12: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 13: return mod_ReactionCraft.OreBlockMulti.blockID;
-                case 14: return mod_ReactionCraft.OreBlockMulti.blockID;
+                case 9: return mod_ReactionCraft.OreMulti.blockID;
+                case 10: return mod_ReactionCraft.OreMulti.blockID;
+                case 11: return mod_ReactionCraft.OreMulti.blockID;
+                case 12: return mod_ReactionCraft.OreMulti.blockID;
+                case 13: return mod_ReactionCraft.OreMulti.blockID;
+                case 14: return mod_ReactionCraft.OreMulti.blockID;
                 case 15: return mod_ReactionCraft.ManganeseDust.shiftedIndex;
-                default: return mod_ReactionCraft.OreBlockMulti.blockID;
+                default: return mod_ReactionCraft.OreMulti.blockID;
             }
     }
 
@@ -146,6 +146,6 @@ public class BlockRcOres extends Block implements ITextureProvider
     
     public String getTextureFile()
     {
-        return "/reactioncraft/Blocks.png";
+        return "/reactioncraft/rcs/Blocks.png";
     }
 }

@@ -15,7 +15,7 @@ public class EntityMage2 extends EntityCreature
         super(world);
 
         //Set the texture
-        texture = "/reactioncraft/mobs/MageMaster.PNG";
+        texture = "/reactioncraft/rcs/mobs/MageMaster.PNG";
 
         //Set the size of the hitbox
         setSize(1F,1F);
