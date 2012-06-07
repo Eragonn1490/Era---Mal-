@@ -379,6 +379,44 @@ public class mod_ReactionCraft extends NetworkMod
 		        public static Item Toke;
 		        
 		        
+		        //
+		        public static Item bongmould;
+		        public static Item bowlmould;
+		        public static Item cylindermould;
+		        public static Item bluebowl;
+		        public static Item bluebong;
+		        public static Item bluecylinder;
+		        public static Item yellowbong;
+		        public static Item yellowbowl;
+		        public static Item yellowcylinder;
+		        public static Item whitebong;
+		        public static Item whitebowl;
+		        public static Item whitecylinder;
+		        public static Item clearbong;
+		        public static Item clearbowl;
+		        public static Item clearcylinder;
+		        public static Item greenbong;
+		        public static Item greenbowl;
+		        public static Item greencylinder;
+		        public static Item orangebong;
+		        public static Item orangebowl;
+		        public static Item orangecylinder;
+		        public static Item blackbong;
+		        public static Item blackbowl;
+		        public static Item blackcylinder;
+		        public static Item purplebong;
+		        public static Item purplebowl;
+		        public static Item purplecylinder;
+		        
+		        //more weedish related items
+		        public static Item joint; 
+		        public static Item driedtoke;
+		        public static Item pipefilter;
+		        public static Item mortat;
+		        public static Item jointtape;
+		        public static Item mortar;
+		        
+		        
 		        
 		        //buckets
 		        public static  Item MagmaBucket;
@@ -444,6 +482,8 @@ public class mod_ReactionCraft extends NetworkMod
 		        public static Item DinosaurFragments;
 		        public static Item DinosaurFragments1;
 		        
+		        //Tele Items-arrow
+		        public static Item Teleorb;
 		        
 		        /**  RailCraft Items **/
 		        public static Item BloodStoneBorehead;
@@ -854,36 +894,86 @@ public class mod_ReactionCraft extends NetworkMod
 		                 AmethystIngot = (new ItemForge(ids[174])).setIconCoord(135, 0).setItemName("AmethystIngot");
 		                 DaeyaltIngot = (new ItemForge(ids[175])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
 		                 
+        
 		                 //"Herb" Plants trololololololol
-		                 Block OrangeKush = new BlockOK(134, 1).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
-		                 Block Blueberryyy = new BlockBbyyy(135, 16).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  	             	
-		             	 LemonKush = new BlockLK(136, 32).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
-		             	 Block BlueDream = new BlockBD(137, 48).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
-		             	 Fire = new BlockKF(138, 64).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
-		             	 Crystal = new BlockCK(139, 80).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  
-		             	
+		                 OrangeKush = new BlockOK(ids[176], 1).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
+		                 Blueberryyy = new BlockBbyyy(ids[177], 16).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  	             	
+		             	 LemonKush = new BlockLK(ids[178], 32).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
+		             	 BlueDream = new BlockBD(ids[179], 48).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
+		             	 Fire = new BlockKF(ids[180], 64).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  		             	
+		             	 Crystal = new BlockCK(ids[181], 80).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  
+		             	 
 		                 
 		                 
 		                 //Seeds
-		                 BlueDreamSeed = (new AncientSeeds(4006, mod_ReactionCraft.BlueDream.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
-		                 BYYSeed = (new AncientSeeds(4005, mod_ReactionCraft.Blueberryyy.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
-		                 CrystalSeed = (new AncientSeeds(4004, mod_ReactionCraft.Crystal.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
-		                 FireSeed = (new AncientSeeds(4003, mod_ReactionCraft.Fire.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
-		                 LKSeed = (new AncientSeeds(4002, mod_ReactionCraft.LemonKush.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
-		                 OKSeed = (new AncientSeeds(4001, mod_ReactionCraft.OrangeKush.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");	
-		                 WildKSeed = new AncientSeeds(4002, mod_ReactionCraft.OrangeKush.blockID, Block.tilledField.blockID).setIconCoord(134, 0).setItemName("AncientSeeds");	
+		                 BlueDreamSeed = (new AncientSeeds(ids[182], mod_ReactionCraft.BlueDream.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
+		                 BYYSeed = (new AncientSeeds(ids[183], mod_ReactionCraft.Blueberryyy.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
+		                 CrystalSeed = (new AncientSeeds(ids[184], mod_ReactionCraft.Crystal.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
+		                 FireSeed = (new AncientSeeds(ids[185], mod_ReactionCraft.Fire.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
+		                 LKSeed = (new AncientSeeds(ids[186], mod_ReactionCraft.LemonKush.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");
+		                 OKSeed = (new AncientSeeds(ids[187], mod_ReactionCraft.OrangeKush.blockID, Block.tilledField.blockID)).setIconCoord(134, 0).setItemName("AncientSeeds");	
+		                 WildKSeed = new AncientSeeds(ids[188], mod_ReactionCraft.OrangeKush.blockID, Block.tilledField.blockID).setIconCoord(134, 0).setItemName("AncientSeeds");	
 		                 
 		                 	                 
 		                 //Leaves
-		                 BlueDreamBud = (new ItemForge(6100)).setIconCoord(134, 0).setItemName("OKLeaf");
-		                 BYYBud = (new ItemForge(3100)).setIconCoord(134, 0).setItemName("OKLeaf");
-		                 CrystalBud = (new ItemForge(5200)).setIconCoord(134, 0).setItemName("OKLeaf");
-		                 FireBud = (new ItemForge(6300)).setIconCoord(134, 0).setItemName("OKLeaf");
-		                 LKBud = (new ItemForge(6400)).setIconCoord(134, 0).setItemName("OKLeaf");
-		                 OKBud = (new ItemForge(6000)).setIconCoord(134, 0).setItemName("OKLeaf");
-		                 Toke = (new ItemForge(7000)).setIconCoord(134, 0).setItemName("OkLeaf");
+		                 BlueDreamBud = (new ItemForge(ids[189])).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 BYYBud = (new ItemForge(ids[190])).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 CrystalBud = (new ItemForge(ids[191])).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 FireBud = (new ItemForge(ids[192])).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 LKBud = (new ItemForge(ids[193])).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 OKBud = (new ItemForge(ids[194])).setIconCoord(134, 0).setItemName("OKLeaf");
+		                 Toke = (new ItemForge(ids[195])).setIconCoord(134, 0).setItemName("OkLeaf");
 		                 
 		                 
+		                 //Bongs-Bong Mould
+		                 bongmould = (new ItemForge(ids[196])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 bowlmould = (new ItemForge(ids[197])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 cylindermould = (new ItemForge(ids[198])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 bluebong = (new ItemForge(ids[199])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 bluebowl = (new ItemForge(ids[200])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 bluecylinder = (new ItemForge(ids[201])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 yellowbong = (new ItemForge(ids[202])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 yellowbowl = (new ItemForge(ids[203])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 yellowcylinder = (new ItemForge(ids[204])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 whitebong = (new ItemForge(ids[205])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 whitebowl = (new ItemForge(ids[206])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 whitecylinder = (new ItemForge(ids[207])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 clearbong = (new ItemForge(ids[208])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 clearbowl = (new ItemForge(ids[209])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 clearcylinder = (new ItemForge(ids[210])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 greenbong = (new ItemForge(ids[211])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 greenbowl = (new ItemForge(ids[212])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 greencylinder = (new ItemForge(213)).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 orangebong = (new ItemForge(ids[214])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 orangebowl = (new ItemForge(ids[215])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 orangecylinder = (new ItemForge(ids[216])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 blackbong = (new ItemForge(ids[217])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 blackbowl = (new ItemForge(ids[218])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 blackcylinder = (new ItemForge(ids[219])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 purplebong = (new ItemForge(ids[220])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 purplebowl = (new ItemForge(ids[221])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 purplecylinder = (new ItemForge(ids[222])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 
+		                 
+		                 //weed items....
+		                 joint = (new ItemForge(ids[223])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 driedtoke = (new ItemForge(ids[224])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 pipefilter = (new ItemForge(ids[225])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 mortar = (new ItemForge(ids[226])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 jointtape = (new ItemForge(ids[227])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 
+		                 //More Exodus BS located here//
+		                 WildKush = new BlockWildK(ids[228], 80).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  
+		                 
+		                  
+		                 //Bottle Stuff
+		                 Mapinabottle = (new IMapinbottle(ids[175])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 Shipinabottle = (new IShipinbottle(ids[175])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
+		                 
+		                 //Teleporting Items-Arrows
+		                 Teleorb = (new ITeleorb(ids[176])).setIconCoord(134, 0).setItemName("Teleorb");
+		                 
+		                 //Wands-spell book
 		                 
 		                 /** RailCraft Items **/
 		                 BloodStoneBorehead = (new IBloodstoneBH(ids[174])).setIconCoord(151, 0).setItemName("BloodstoneBorehead");	
@@ -1505,14 +1595,6 @@ public class mod_ReactionCraft extends NetworkMod
                   
     }
 	
-	
-	@Override
-    public boolean clientSideRequired()
-    {
-            return false;
-    }
-
-	
 	public void generateSurface(World world, Random rand, int baseX, int baseZ)
     {	
   		
@@ -1933,6 +2015,13 @@ public class mod_ReactionCraft extends NetworkMod
              }
     
     }    
+	
+	@Override
+    public boolean clientSideRequired()
+    {
+            return false;
+    }
+
 	
     @Override
     public boolean serverSideRequired()
