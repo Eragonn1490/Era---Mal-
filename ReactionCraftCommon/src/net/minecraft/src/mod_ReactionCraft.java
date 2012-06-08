@@ -54,10 +54,10 @@ public class mod_ReactionCraft extends NetworkMod
 		public static Block SeaWeed;
 	    
 		
-		//GUI Blocks
-		public static Block RcCrate;
-		public static Block NetherfurnaceIA;
-		public static Block NetherfurnaceA;
+		//Bee Blocks
+		public static Block Hiveblock;
+		public static Block Cellblock;
+		public static Block Larvablock;
 		
 		
 		//Sand Blocks
@@ -543,68 +543,394 @@ public class mod_ReactionCraft extends NetworkMod
 					
 					
 					//Non Meta's
+					
+					//PlantPot
 					Integer.parseInt(config.getOrCreateBlockIdProperty("Plant Pot", 139).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("BloodStone", 140).value),
-						//Slab
-					Integer.parseInt(config.getOrCreateBlockIdProperty("BloodStone Slab", 141).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("BloodStone Slab D", 142).value),
-						//Slab
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Gold Slab", 141).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Gold Slab D", 142).value),
-						//Slab
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Bedrock Slab", 141).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Bedrock Slab D", 142).value),
-						//Slab
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Stained Plank Slab", 141).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Stained Plank Slab D", 142).value),
-						//Slab
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Marble Slab", 141).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Marble Slab D", 142).value),
+					
+					//Liquids
+					Integer.parseInt(config.getOrCreateBlockIdProperty("MagmaMoving", 140).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("MagmaStill", 141).value),
+					
+					//Ores
+					Integer.parseInt(config.getOrCreateBlockIdProperty("BloodStone", 142).value),
+						
+					//Slabs (might be cut in half depending on malkerian...
+					Integer.parseInt(config.getOrCreateBlockIdProperty("BloodStone Slab", 143).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("BloodStone Slab D", 144).value),
+					//Slab
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Gold Slab", 145).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Gold Slab D", 146).value),
+					//Slab
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Bedrock Slab", 147).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Bedrock Slab D", 148).value),
+					//Slab
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Stained Plank Slab", 149).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Stained Plank Slab D", 150).value),
+					//Slab
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Marble Slab", 151).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Marble Slab D", 152).value),
 					
 					
 					//Stairs
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Gold Stair", 143).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Bedrock Stair", 144).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Diamond Stair", 145).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Glowstone Stair", 146).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Sandstone Stair", 147).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Bloodstone Brick Stair", 148).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("DesertBrick Stair", 149).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("DesertBricks Stair", 150).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Marble Stair", 151).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Stained Plank Stair", 152).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Gold Stair", 153).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Bedrock Stair", 154).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Diamond Stair", 155).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Glowstone Stair", 156).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Sandstone Stair", 157).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Bloodstone Brick Stair", 158).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("DesertBrick Stair", 159).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("DesertBricks Stair", 160).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Marble Stair", 161).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Stained Plank Stair", 162).value),
 					//End of Stairs
 					
 					
 					//Gravity Affected Blocks
-					Integer.parseInt(config.getOrCreateBlockIdProperty("DarkSand", 153).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("DarkSand", 163).value),
 					//End of Gravity Blocks
 			        
 					
-					//Gui Blocks
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Crate Block", 154).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Nether Furnace on", 155).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Nether Furnace off", 156).value),
-			        //End of Gui Blocks
+					//Bee Blocks
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Hive Block", 164).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Cell Block", 165).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Larva Block", 166).value),
+			        //End of Bee Blocks
 					
 					
 					//Plants
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Ancient Plant", 157).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Ancient Plant", 167).value),
 					//End of Plants
 
 					
 					//Redstone Related Blocks
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Trap Door Block", 158).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Redstone Block", 159).value),
-					Integer.parseInt(config.getOrCreateBlockIdProperty("Compressed Redstone Block", 160).value),					
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Trap Door Block", 168).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Redstone Block", 169).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Compressed Redstone Block", 170).value),					
 					//End of Redstone Related Blocks
 					
+					//Planks
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Stained Plank", 171).value),
+					
+					
+					//Spike Traps
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Spike Upright", 172).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Spike Downturned", 173).value),
+					
+					
+					
+					//Flowers
+					Integer.parseInt(config.getOrCreateBlockIdProperty("ReactionCraft Grass", 174).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("VaseBlock", 175).value),
+					
+					
+					//First Door
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Wooden Bookcasedoor", 176).value),
+					
+					
+					//Fences
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Sandstone Fence", 177).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Bloodstone Fence", 178).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Cobblestone Fence", 179).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Marble Fence", 180).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Stone Fence", 181).value),
+					
+					
+					//PermaFrost
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Permafrost Block", 182).value),
+					
+					//Torches
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Mystic Torch", 183).value),
+					
+					//Chandelier Chains
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Chain", 184).value),
+					
+					
+					//Glowing Grass
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Glowing Grass Block", 185).value),
+					
+					
+					//Coral Blocks
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Coral Block 1", 186).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Coral Block 2", 187).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Coral Block 3", 188).value),
+					
+					
+					//Coral Plants
+					Integer.parseInt(config.getOrCreateBlockIdProperty("OrangeCoral", 189).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("GreenCoral", 190).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("PurpleCoral", 191).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("BrownCoral", 192).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("LightBlueCoral", 193).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("LightGreenCoral", 194).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("DarkGreenCoral", 195).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("RedCoral", 196).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("MagentaCoral", 197).value),
+					
+					
+					//Ladder Type Blocks
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Chain Ladder", 198).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Vine Ladder", 199).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Rope", 200).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Gold Ladder", 201).value),
+					
+					
+					//SeaWeed Plant
+					Integer.parseInt(config.getOrCreateBlockIdProperty("SeaWeed", 202).value),
+					
+					
+					//LimeStone
+					Integer.parseInt(config.getOrCreateBlockIdProperty("LimeStone", 203).value),
+					
+					
+					//Custom Block Model Blocks...
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Gold Bars", 204).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Creeper Statue", 205).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Human Statue", 206).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Zombie Statue", 207).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Spider Statue", 208).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Cow Statue", 209).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Pig Statue", 210).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Skeleton Statue", 211).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Villager Statue", 212).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Not Implemented Yet Statue", 213).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Enderman Statue", 214).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("IronGolem Statue", 215).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Snowman", 216).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Starfish", 217).value),
+					
+							
 					//Items
+					config.getOrCreateIntProperty("Bloodstone Dust", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Black Diamond Shard", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Black Diamond Gem", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Raw Materials Stuff
+					config.getOrCreateIntProperty("Straw", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Sack", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Dried Bamboo", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Dark Green Dye", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("NetherCane Dust", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Dusts..
+					config.getOrCreateIntProperty("Manganese Dust", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Zinc Dust", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Bloodstone-DragonStone Tools
+					config.getOrCreateIntProperty("Bloodstone Hoe", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Bloodstone Axe", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Bloodstone Shovel", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Bloodstone Sword", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Bloodstone Picaxe", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Bone Tools
+					config.getOrCreateIntProperty("Bone Picaxe", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//White Diamond gems
+					config.getOrCreateIntProperty("White Diamond Gem", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("White Diamond Shard", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					//misc stuff...
+					config.getOrCreateIntProperty("Superheated Iron", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Chain Loop", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Chain Loops", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Fossil Parts
+					config.getOrCreateIntProperty("Dinosaur Fragments", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Dinosaur Fragments 2", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//ReactionCraft Desert Items
+					config.getOrCreateIntProperty("Sandstone Paste", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Flint Chisel", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Gold Chisel", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Foods
+					config.getOrCreateIntProperty("Ancient Fruit", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Bacon", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Raw Bacon", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Sliced Bread", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Steak Sandwich", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Food Tools
+					config.getOrCreateIntProperty("Knife", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//ReactionCraft Desert Gems
+					config.getOrCreateIntProperty("DarkBlue Desert Gem", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("DarkBlue Desert Gem Shard", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("LightBlue Desert Gem Shard", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("LightBlue Desert Gem", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Buckets
+					config.getOrCreateIntProperty("Magma Bucket", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Other Tools...
+					config.getOrCreateIntProperty("Stone Hammer", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Plant Item Blocks..
+					config.getOrCreateIntProperty("Bamboo Item", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Flag Item.
+					config.getOrCreateIntProperty("Flag Item", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Currency
+					config.getOrCreateIntProperty("Bag of Gold", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Bag of Silver", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Bag of Diamond", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Bag", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//More ReactionCraft Desert Stuff
+					config.getOrCreateIntProperty("Papyrus Paper", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Reed Item", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Scroll", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Magma Flint", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Ingots
+					config.getOrCreateIntProperty("Refined Gold Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Refined Silver Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Silver Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Brass Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Obsidian Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Bloodstone Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Mithril Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Cobalt Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Titanium Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Tin Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Adamantite Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Copper Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Platinum Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Manganese Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Onyx Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Iridium Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Calcite Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Amethyst Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Daeyalt Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Steel Ingot", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					//Herb Plants.... "its a Troll for weed"
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Orange Kush", 218).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Blueberry Yum Yum", 219).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Lemon Kush", 220).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Blue Dream", 221).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Fire", 222).value),
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Crystal", 223).value),
+					
+					//Seeds
+					config.getOrCreateIntProperty("Blue Dream Seed", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Blueberry Yum Yum Seed", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Crystal Seed", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Fire Seed", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Lemon Kush Seed", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Orange Kush Seed", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Wild Kush Seed", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Buds
+					config.getOrCreateIntProperty("Blue Dream Bud", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Blueberry Yum Yum Bud", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Crystal Bud", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Fire Bud", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Lemon Kush Bud", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Orange Kush Bud", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Toke", config.CATEGORY_ITEM, 7000).getInt(),
+					
+				
+					//Bongs and other Misc Stuff...27
+					config.getOrCreateIntProperty("Bong Mould", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Bowl Mould", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Cylinder Mould", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Blue Bong", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Blue Bowl", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Blue Cylinder", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Yellow Bong", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Yellow Bowl", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Yellow Cylinder", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("White Bong", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("White Bowl", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("White Cylinder", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Clear Bong", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Clear Bowl", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Clear Cylinder", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Green Bong", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Green Bowl", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Green Cylinder", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Orange Bong", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Orange Bowl", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Orange Cylinder", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Black Bong", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Black Bowl", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Black Cylinder", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Purple Bong", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Purple Bowl", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Purple Cylinder", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("OrangeBlack Bong", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("OrangeBlack Bowl", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("OrangeBlack Cylinder", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					//more exodus stuff....
+					config.getOrCreateIntProperty("Joint", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Dried Toke", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Pipefilter", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Mortar", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Joint tape", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Wild Weed Plant
+					Integer.parseInt(config.getOrCreateBlockIdProperty("Wild Kush", 224).value),
+					
+					
+					//Ship in a Bottle Stuff
+					config.getOrCreateIntProperty("Map in a bottle", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Ship in a bottle", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Teleporting Items
+					config.getOrCreateIntProperty("Teleorb", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Ender Pearl Arrow", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Arrows tele arrow above ^^^^^^^^
+					config.getOrCreateIntProperty("Magma Flint Arrow", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Diamond Arrow", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Posion Arrow", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Freezing Arrow", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Fire Arrow", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Flare Arrow", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//Wands-Spell Book Items
+					config.getOrCreateIntProperty("Fire Wand", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Wind Wand", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Dragonstone Wand", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Water Wand", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Lightning Wand", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("SpellBook", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Nether Spell Book", config.CATEGORY_ITEM, 7000).getInt(),
+					
+					
+					//RailCraft Items
+					config.getOrCreateIntProperty("Bloodstone BoreHead", config.CATEGORY_ITEM, 7000).getInt(),
+					config.getOrCreateIntProperty("Blackdiamond BoreHead", config.CATEGORY_ITEM, 7000).getInt(),
 					
 		};
 		config.save();
 		
-				//Block Code 
+				/** Block Code **/
 					//Meta Blocks
 					Multi = new BlockMulti(ids[1], Material.glass).setHardness(0.3F).setBlockName("Multi");
 					FlowerMulti = new BlockFlowerMulti(ids[2], Material.plants).setHardness(0.0F).setBlockName("FlowerMulti").setRequiresSelfNotify();
@@ -624,7 +950,7 @@ public class mod_ReactionCraft extends NetworkMod
 					LanternMulti = new BlockLanternMulti(ids[18], Material.glass).setLightValue(1.0F).setHardness(0.3F).setBlockName("LanternMulti");					
 					CactusMulti = new BlockCactusMulti(ids[19], Material.plants).setHardness(0.10F).setResistance(0.1F).setStepSound(Block.soundStoneFootstep).setBlockName("StairMulti").setRequiresSelfNotify();
 					
-				//Non Meta Blocks
+				/** Non Meta Blocks **/
 				
 				//Plant Pot
 					PlantPot = new BlockPlantPot(ids[20], 99).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("PlantPot");
@@ -637,6 +963,7 @@ public class mod_ReactionCraft extends NetworkMod
 				//Ores
 					BloodStone = new BlockForge(ids[23], 81).setHardness(60.0F).setResistance(2000.0F).setLightValue(0.25F).setStepSound(Block.soundStoneFootstep).setBlockName("BloodStone");
 				
+					
 				//Slabs
 					//84
 					BloodStoneSlab = new BlockSlabRc(ids[24], true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("BloodStoneSlab");
@@ -675,9 +1002,11 @@ public class mod_ReactionCraft extends NetworkMod
 				
 			        
 			    //Gui Blocks
-			        RcCrate = (new BlockCrate(ids[47])).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("RcCrate");
-			        NetherfurnaceIA = (new BlockNetherFurnace(ids[48], false)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setBlockName("Netherfurnace").setRequiresSelfNotify();
-			        NetherfurnaceA = (new BlockNetherFurnace(ids[49], true)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setLightValue(0.875F).setBlockName("Netherfurnace").setRequiresSelfNotify();
+			        Hiveblock = new BlockForge(ids[47], 100).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("StainedPlank");
+			        Cellblock = new BlockForge(ids[48], 100).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("StainedPlank");
+			        Larvablock = new BlockForge(ids[49], 100).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setBlockName("StainedPlank");
+			        
+			        
 			    //Plants
 				    AncientPlant = new AncientPlant(ids[50], 0).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundStoneFootstep).setBlockName("AncientPlant");  
 			        
@@ -963,7 +1292,7 @@ public class mod_ReactionCraft extends NetworkMod
 		                 jointtape = (new ItemForge(ids[227])).setIconCoord(134, 0).setItemName("DaeyaltIngot");
 		                 
 		                 //More Exodus BS located here//
-		                 WildKush = new BlockWildK(ids[228], 80).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant");  
+		                 WildKush = new BlockWildK(ids[228], 80).setHardness(0.0F).setResistance(5.0F).setStepSound(Block.soundGrassFootstep).setBlockName("AncientPlant").setRequiresSelfNotify();  
 		                 
 		                  
 		                 //Bottle Stuff
@@ -1112,8 +1441,9 @@ public class mod_ReactionCraft extends NetworkMod
 	        //Custom Block Models
 			ModLoader.registerBlock(blockAluminium);
 			ModLoader.registerBlock(creeperStatue);
-			ModLoader.registerBlock(NetherfurnaceIA);
-			ModLoader.registerBlock(NetherfurnaceA);
+			ModLoader.registerBlock(Cellblock);
+			ModLoader.registerBlock(Larvablock);
+			ModLoader.registerBlock(Hiveblock);
 			ModLoader.registerBlock(creeperStatue);
 			ModLoader.registerBlock(HumanStatue);
 			ModLoader.registerBlock(ZombieStatue);
